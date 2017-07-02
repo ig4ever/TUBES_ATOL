@@ -68,7 +68,8 @@
 			}else{
 				mysqli_rollback($connection);
 				echo "<script language=javascript>alert('Registrasi Gagal');</script>";
-				echo "<script language=javascript>document.location.href='../signup.php'</script>";
+				echo $query;
+				//echo "<script language=javascript>document.location.href='../signup.php'</script>";
 			}		
 		}else {
 			mysqli_rollback($connection);
