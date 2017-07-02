@@ -12,7 +12,7 @@
     //Azure Connection
     // PHP Data Objects(PDO) Sample Code:
     try {
-        $conn = new PDO("sqlsrv:server = tcp:lowker.database.windows.net,1433; Database = lowker", "admin1", "{your_password_here}");
+        $conn = new PDO("sqlsrv:server = tcp:lowker.database.windows.net,1433; Database = lowker", "admin1", "{Admin4241622}");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     catch (PDOException $e) {
