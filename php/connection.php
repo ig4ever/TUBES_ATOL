@@ -1,16 +1,16 @@
 <?php
-    /*//Local server
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $database = "db_lowker";
+    //Local server
+    $host = "us-cdbr-azure-west-b.cleardb.com";
+    $user = "b619a5cf6e68dd";
+    $pass = "e0153e39";
+    $database = "loker";
     
     $connection = mysqli_connect($host, $user, $pass, $database);
     if (mysqli_connect_errno()) {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }*/
+    }
 
-    //Azure Connection
+    /*//Azure Connection
     $connectstr_dbhost = '';
     $connectstr_dbname = '';
     $connectstr_dbusername = '';
@@ -39,5 +39,5 @@
     //echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
     //echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
-    mysqli_close($link);
+    mysqli_close($link);*/
 ?>
