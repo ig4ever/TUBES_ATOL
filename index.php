@@ -15,10 +15,24 @@
         <!--     Fonts and icons     -->
         <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,800,900' rel='stylesheet' type='text/css'>
         <link href="font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+        <script type="text/javascript"
+                src="http://maps.google.com/maps/api/js?sensor=true&amp;key=AIzaSyAEYngJhtgtGJZOVd5c_G-I83qCK2ntToQ"></script>
+        <script type="text/javascript">
+            function initialize() {
+                var latlng = new google.maps.LatLng(-6.9127778, 107.6205556);
+                var myOptions = {
+                    zoom: 13,
+                    center: latlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            }
+        </script>
     </head>
 
-    <body>
-        <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+    <body onload="initialize()">
+        <nav class="navbar navbar-inverse navbar-fixed-top" color-on-scroll="200">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -36,7 +50,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
                                 aria-expanded="false" style="color: #FFFFFF; border-radius: 10px;">
-                                Perusahaan
+                                Pemilik Usaha
                             </a>
                             <ul class="dropdown-menu dropdown-info" aria-labelledby="dLabel">
                                 <li>
@@ -73,28 +87,35 @@
                 <div class="container">
                     <div class="content">
                         <form method="GET" action="lowongan_list.php">
-                            <div class="title-area">
+                            <div class="row">
                                 <p>Cari Lowongan Pekerjaan yang Kamu Inginkan</p><br/>
-                                <div class="row" style="">
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control input-lg" name="nama" placeholder="Lowongan Pekerjaan" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <select class="form-control input-lg" name="kota_id" style="height: 55px; font-size: 16px;">
-                                        <?php
-                                            $strQuery = "SELECT kota_id, kota_nama FROM kota";
-                                            $query = mysqli_query($connection, $strQuery);
-                                                echo "<option>Nama Kota</option>";
-                                            while($result = mysqli_fetch_assoc($query)){
-                                                echo "<option value=$result[kota_id]>$result[kota_nama]</option>";
-                                            }
-                                        ?>
-                                        </select>
-                                    </div>
+                            </div>
+                            <div class="row" style="">
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-lg" name="nama"
+                                           placeholder="Lowongan Pekerjaan"/>
                                 </div>
-                                <button type="Submit" class="btn btn-primary btn-fill btn-lg" style="height: 55px;">
-                                    Cari Lowongan
-                                </button>
+                                <div class="col-md-3">
+                                    <select class="form-control input-lg" name="kota_id"
+                                            style="height: 55px; font-size: 16px;">
+                                        <?php
+                                        $strQuery = "SELECT kota_id, kota_nama FROM kota";
+                                        $query = mysqli_query($connection, $strQuery);
+                                        echo "<option>Nama Kota</option>";
+                                        while ($result = mysqli_fetch_assoc($query)) {
+                                            echo "<option value=$result[kota_id]>$result[kota_nama]</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="Submit" class="btn btn-primary btn-fill btn-lg" style="height: 55px;">
+                                        Cari Lowongan
+                                    </button>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div id="map_canvas" style="width:600px; height:600px"></div>
                             </div>
                         </form>
                     </div>

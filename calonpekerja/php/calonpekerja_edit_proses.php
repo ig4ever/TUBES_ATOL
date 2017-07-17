@@ -77,7 +77,7 @@
 			calon_pekerja_status_pernikahan = '$status_pernikahan',
 			calon_pekerja_email = '$email',  
 			calon_pekerja_telepon = '$telepon',  
-			calon_pekerja_pendidikan_terakhir = '$pendidikan_terakhir',  
+			calon_pekerja_pendidikan_terakhir = '$pendidikan_terakhir',   
 			calon_pekerja_tempat_pendidikan_terakhir = '$tempat_pendidikan_terakhir',  
 			calon_pekerja_tempat_bekerja_terakhir = '$tempat_bekerja_terakhir',  
 			calon_pekerja_pekerjaan_bekerja_terakhir = '$pekerjaan_bekerja_terakhir',
