@@ -316,13 +316,13 @@ INSERT INTO `lowongan_syarat` VALUES (67,6,'OOP Expert'),(68,6,'Java Expert'),(7
 UNLOCK TABLES;
 
 --
--- Table structure for table `perusahaan`
+-- Table structure for table `pemilikusaha`
 --
 
-DROP TABLE IF EXISTS `perusahaan`;
+DROP TABLE IF EXISTS `pemilikusaha`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `perusahaan` (
+CREATE TABLE `pemilikusaha` (
   `perusahaan_id` int(11) NOT NULL AUTO_INCREMENT,
   `perusahaan_nama` varchar(51) NOT NULL,
   `perusahaan_alamat` varchar(101) DEFAULT NULL,
@@ -338,13 +338,13 @@ CREATE TABLE `perusahaan` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `perusahaan`
+-- Dumping data for table `pemilikusaha`
 --
 
-LOCK TABLES `perusahaan` WRITE;
-/*!40000 ALTER TABLE `perusahaan` DISABLE KEYS */;
-INSERT INTO `perusahaan` VALUES (20,'Google HQ','Antapani',1,'google@gmail.com','0222222'),(25,'Microsoft','Jl. Dipatiukur JKT',4,'ms@outlook.com','021222222'),(27,'Facebook','',5,'',''),(33,'Twitter','Jl. Dago',1,'twitter@gmail.com','087890009899'),(37,'Amazon','',1,'amazon@gmail.com','');
-/*!40000 ALTER TABLE `perusahaan` ENABLE KEYS */;
+LOCK TABLES `pemilikusaha` WRITE;
+/*!40000 ALTER TABLE `pemilikusaha` DISABLE KEYS */;
+INSERT INTO `pemilikusaha` VALUES (20,'Google HQ','Antapani',1,'google@gmail.com','0222222'),(25,'Microsoft','Jl. Dipatiukur JKT',4,'ms@outlook.com','021222222'),(27,'Facebook','',5,'',''),(33,'Twitter','Jl. Dago',1,'twitter@gmail.com','087890009899'),(37,'Amazon','',1,'amazon@gmail.com','');
+/*!40000 ALTER TABLE `pemilikusaha` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -355,7 +355,7 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER check_role_perusahaan BEFORE INSERT ON perusahaan FOR EACH ROW
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER check_role_perusahaan BEFORE INSERT ON pemilikusaha FOR EACH ROW
 	BEGIN
 		IF (SELECT login_role FROM login WHERE login_id = NEW.perusahaan_id) != 'Perusahaan' THEN 
 			SIGNAL SQLSTATE '45000';

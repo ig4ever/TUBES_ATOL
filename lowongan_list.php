@@ -41,10 +41,10 @@
                             </a>
                             <ul class="dropdown-menu dropdown-info" aria-labelledby="dLabel">
                                 <li>
-                                    <a href="perusahaan/login.php">Sign In</a>
+                                    <a href="pemilikusaha/login.php">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="perusahaan/signup.php">Sign Up</a>
+                                    <a href="pemilikusaha/signup.php">Sign Up</a>
                                 </li>
                             </ul>
                         </li>
@@ -55,10 +55,10 @@
                             </a>
                             <ul class="dropdown-menu dropdown-info" aria-labelledby="dLabel">
                                 <li>
-                                    <a href="calonpekerja/login.php">Sign In</a>
+                                    <a href="datausaha/login.php">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="calonpekerja/signup.php">Sign Up</a>
+                                    <a href="datausaha/signup.php">Sign Up</a>
                                 </li>
                             </ul>
                         </li>
@@ -74,7 +74,7 @@
                                 if(isset($_GET['nama']) && isset($_GET['kota_id'])){
                                     $strQuery = "SELECT l.lowongan_id, p.perusahaan_id, p.perusahaan_nama, k.kategori_id, k.kategori_nama, c.kota_id, c.kota_nama,
                                     l.lowongan_judul, l.lowongan_deskripsi, l.lowongan_tgl_buka, l.lowongan_tgl_tutup
-                                    FROM lowongan l INNER JOIN perusahaan p ON l.perusahaan_id = p.perusahaan_id
+                                    FROM lowongan l INNER JOIN pemilikusaha p ON l.perusahaan_id = p.perusahaan_id
                                     INNER JOIN kategori k ON l.kategori_id = k.kategori_ID 
                                     INNER JOIN kota c ON p.kota_id = c.kota_id
                                     WHERE l.lowongan_judul LIKE '%$_GET[nama]%' AND c.kota_id = '$_GET[kota_id]' AND l.lowongan_tgl_tutup >= CURDATE()
@@ -82,7 +82,7 @@
                                 }else {
                                         $strQuery = "SELECT l.lowongan_id, p.perusahaan_id, p.perusahaan_nama, k.kategori_id, k.kategori_nama, c.kota_nama,
                                         l.lowongan_judul, l.lowongan_deskripsi, l.lowongan_tgl_buka, l.lowongan_tgl_tutup
-                                        FROM lowongan l INNER JOIN perusahaan p ON l.perusahaan_id = p.perusahaan_id
+                                        FROM lowongan l INNER JOIN pemilikusaha p ON l.perusahaan_id = p.perusahaan_id
                                         INNER JOIN kategori k ON l.kategori_id = k.kategori_ID
                                         INNER JOIN kota c ON p.kota_id = c.kota_id 
                                         WHERE l.lowongan_tgl_tutup >= CURDATE()

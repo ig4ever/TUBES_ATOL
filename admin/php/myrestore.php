@@ -5,9 +5,9 @@
 	$mysql_host = "localhost";
 	$mysql_user = "root";
 	$mysql_pass = "";
-	$mysql_database = "db_lowker";
+	$mysql_database = "new_atol";
 	$backup_folder = "../backup";
-	$name = 'db-lowker'.date("YmdHis").'.sql';
+	$name = 'new_atol'.date("YmdHis").'.sql';
 
 	$koneksi = mysqli_connect($mysql_host, $mysql_user, $mysql_pass);
 	if(!$koneksi){

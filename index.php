@@ -42,36 +42,23 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a href="index.php" class="navbar-brand" style="color: #FFFFFF;">
-                        LOWKER
+                        Sistem Informasi Geografis Potensi Usaha
+                        di Kota Bandung
                     </a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right navbar-uppercase">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                aria-expanded="false" style="color: #FFFFFF; border-radius: 10px;">
+                                aria-expanded="false" style="color: #FFFFFF; background-color: #00B16A; border-radius: 10px;">
                                 Pemilik Usaha
                             </a>
                             <ul class="dropdown-menu dropdown-info" aria-labelledby="dLabel">
                                 <li>
-                                    <a href="perusahaan/login.php">Sign In</a>
+                                    <a href="pemilikusaha/login.php">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="perusahaan/signup.php">Sign Up</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                aria-expanded="false" style="color: #FFFFFF; background-color: #00B16A; border-radius: 10px;">
-                                Calon Pekerja
-                            </a>
-                            <ul class="dropdown-menu dropdown-info" aria-labelledby="dLabel">
-                                <li>
-                                    <a href="calonpekerja/login.php">Sign In</a>
-                                </li>
-                                <li>
-                                    <a href="calonpekerja/signup.php">Sign Up</a>
+                                    <a href="pemilikusaha/signup.php">Sign Up</a>
                                 </li>
                             </ul>
                         </li>
@@ -115,7 +102,7 @@
                                 </div>
                                 </div>
                             <div class="row">
-                                <div id="map_canvas" style="width:600px; height:600px"></div>
+                                <div id="map_canvas" style="width:1920px; height:1080px"></div>
                             </div>
                         </form>
                     </div>

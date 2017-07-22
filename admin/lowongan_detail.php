@@ -46,19 +46,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="calonpekerja.php">
+                            <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
                                 <p>Calon Pekerja</p>
                             </a>
                         </li>
                         <li>
-                            <a href="perusahaan.php">
+                            <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
                                 <p>Perusahaan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="kategori.php">
+                            <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
                                 <p>Kategori</p>
                             </a>
@@ -70,7 +70,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="lamaran.php">
+                            <a href="sektorusaha.php">
                                 <i class="fa fa-paperclip" style="font-size: 18px;"></i>
                                 <p>Lamaran</p>
                             </a>
@@ -140,7 +140,7 @@
                                                 <?php
                                                     $strQuery = "SELECT l.lowongan_id, p.perusahaan_id, p.perusahaan_nama, k.kategori_id, k.kategori_nama,
                                                         l.lowongan_judul, l.lowongan_deskripsi, l.lowongan_tgl_buka, l.lowongan_tgl_tutup
-                                                        FROM lowongan l INNER JOIN perusahaan p ON l.perusahaan_id = p.perusahaan_id
+                                                        FROM lowongan l INNER JOIN pemilikusaha p ON l.perusahaan_id = p.perusahaan_id
                                                         INNER JOIN kategori k ON l.kategori_id = k.kategori_ID 
                                                         WHERE lowongan_id = $id
                                                         ORDER BY lowongan_id DESC";
@@ -164,7 +164,7 @@
                                                     <!-- Modal Delete -->
                                                     <div class="modal fade " id="delete<?php echo $i;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                         <div class="modal-dialog modal-sm" role="document">
-                                                            <form method="POST" action="php/lowongan_delete_proses.php">
+                                                            <form method="POST" action="php/kelurahan_delete_proses.php">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -200,7 +200,7 @@
                                                 <?php
                                                     $strQuery = "SELECT l.lowongan_id, p.perusahaan_id, p.perusahaan_nama, k.kategori_id, k.kategori_nama,
                                                         l.lowongan_judul, l.lowongan_deskripsi, l.lowongan_tgl_buka, l.lowongan_tgl_tutup
-                                                        FROM lowongan l INNER JOIN perusahaan p ON l.perusahaan_id = p.perusahaan_id
+                                                        FROM lowongan l INNER JOIN pemilikusaha p ON l.perusahaan_id = p.perusahaan_id
                                                         INNER JOIN kategori k ON l.kategori_id = k.kategori_ID 
                                                         WHERE lowongan_id = $id
                                                         ORDER BY lowongan_id DESC";
@@ -409,7 +409,7 @@
                                                         FROM lamaran la INNER JOIN calon_pekerja cp ON la.calon_pekerja_id = cp.calon_pekerja_id 
                                                         INNER JOIN kota k ON cp.kota_id = k.kota_id
                                                         INNER JOIN lowongan l ON la.lowongan_id = l.lowongan_id
-                                                        INNER JOIN perusahaan p ON l.perusahaan_id = p.perusahaan_id
+                                                        INNER JOIN pemilikusaha p ON l.perusahaan_id = p.perusahaan_id
                                                         INNER JOIN kota kp ON p.kota_id = kp.kota_id
                                                         WHERE l.lowongan_id = $id
                                                         ORDER BY lamaran_id DESC";

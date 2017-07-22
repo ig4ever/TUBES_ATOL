@@ -106,12 +106,12 @@ INSERT INTO `lowongan_syarat` VALUES (67,6,'OOP Expert'),(68,6,'Java Expert'),(7
 UNLOCK TABLES;
 
 --
--- Dumping data for table `perusahaan`
+-- Dumping data for table `pemilikusaha`
 --
 
-LOCK TABLES `perusahaan` WRITE;
-/*!40000 ALTER TABLE `perusahaan` DISABLE KEYS */;
-INSERT INTO `perusahaan` VALUES (20,'Google HQ','Antapani',1,'google@gmail.com','0222222'),(25,'Microsoft','Jl. Dipatiukur JKT',4,'ms@outlook.com','021222222'),(27,'Facebook','',5,'','');
+LOCK TABLES `pemilikusaha` WRITE;
+/*!40000 ALTER TABLE `pemilikusaha` DISABLE KEYS */;
+INSERT INTO `pemilikusaha` VALUES (20,'Google HQ','Antapani',1,'google@gmail.com','0222222'),(25,'Microsoft','Jl. Dipatiukur JKT',4,'ms@outlook.com','021222222'),(27,'Facebook','',5,'','');
 /*!40000 ALTER TABLE `perusahaan` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

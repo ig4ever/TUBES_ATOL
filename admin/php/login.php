@@ -1,11 +1,11 @@
 <?php
 	require "../../php/connection.php";
 	session_start();
-	$username = $_POST['username'];
+	$username = $_POST['noKtp'];
 	$password = $_POST['password'];
 	$encPassword = md5($password);
 	
-	$strQuery = "SELECT * FROM login WHERE login_username = '$username' AND login_password='$encPassword'";
+	$strQuery = "SELECT * FROM login WHERE no_ktp = '$username' AND password='$encPassword'";
 	$query = mysqli_query($connection, $strQuery);
 	if($query){
 		$thereIsAUser = mysqli_num_rows($query);

@@ -43,31 +43,31 @@
                             </a>
                         </li>
                         <li>
-                            <a href="calonpekerja.php">
+                            <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
                                 <p>Calon Pekerja</p>
                             </a>
                         </li>
                         <li>
-                            <a href="perusahaan.php">
+                            <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
                                 <p>Perusahaan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="kategori.php">
+                            <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
                                 <p>Kategori</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lowongan.php">
+                            <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
                                 <p>Lowongan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lamaran.php">
+                            <a href="sektorusaha.php">
                                 <i class="fa fa-paperclip" style="font-size: 18px;"></i>
                                 <p>Lamaran</p>
                             </a>

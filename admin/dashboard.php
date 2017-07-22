@@ -16,7 +16,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Lowker</title>
+        <title>Admin Page</title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <meta name="viewport" content="width=device-width" />
         <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -33,7 +33,7 @@
                     <div class="logo">
                         <!--<img src="../img/logo.png" width="60px" />-->
                         <a href="#" class="simple-text">
-                            Lowker Admin
+                            Admin
                         </a>
                     </div>
                     <ul class="nav">
@@ -44,39 +44,33 @@
                             </a>
                         </li>
                         <li>
-                            <a href="calonpekerja.php">
+                            <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
-                                <p>Calon Pekerja</p>
+                                <p>Pemilik Usaha</p>
                             </a>
                         </li>
                         <li>
-                            <a href="perusahaan.php">
+                            <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
-                                <p>Perusahaan</p>
+                                <p>Data Usaha</p>
                             </a>
                         </li>
                         <li>
-                            <a href="kategori.php">
+                            <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
-                                <p>Kategori</p>
+                                <p>Kecamatan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lowongan.php">
+                            <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
-                                <p>Lowongan</p>
+                                <p>Kelurahan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lamaran.php">
+                            <a href="sektorusaha.php">
                                 <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Lamaran</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kota.php">
-                                <i class="fa fa-bank" style="font-size: 18px;"></i>
-                                <p>Kota</p>
+                                <p>Sektor Usaha</p>
                             </a>
                         </li>
                     </ul>
@@ -127,9 +121,9 @@
                                             </div>
                                             <div class="col-xs-7">
                                                 <div class="numbers">
-                                                    <p>Calon Pekerja</p>
+                                                    <p>Pemilik Usaha</p>
                                                     <?php
-                                                    $strQuery = "SELECT calon_pekerja_id FROM calon_pekerja";
+                                                    $strQuery = "SELECT pemilik_usaha_id FROM pemilik_usaha";
                                                     $query = mysqli_query($connection, $strQuery);
                                                     echo mysqli_num_rows($query); 
                                                 ?>
@@ -150,9 +144,9 @@
                                             </div>
                                             <div class="col-xs-7">
                                                 <div class="numbers">
-                                                    <p>Perusahaan</p>
+                                                    <p>Data Usaha</p>
                                                     <?php
-                                                    $strQuery = "SELECT perusahaan_id FROM perusahaan";
+                                                    $strQuery = "SELECT id_usaha FROM data_usaha";
                                                     $query = mysqli_query($connection, $strQuery);
                                                     echo mysqli_num_rows($query); 
                                                 ?>
@@ -173,9 +167,9 @@
                                             </div>
                                             <div class="col-xs-7">
                                                 <div class="numbers">
-                                                    <p>Kategori</p>
+                                                    <p>Kecamatan</p>
                                                     <?php
-                                                    $strQuery = "SELECT kategori_id FROM kategori";
+                                                    $strQuery = "SELECT Idkec FROM kecamatan";
                                                     $query = mysqli_query($connection, $strQuery);
                                                     echo mysqli_num_rows($query); 
                                                     ?>
@@ -196,9 +190,9 @@
                                             </div>
                                             <div class="col-xs-7">
                                                 <div class="numbers">
-                                                    <p>Lowongan</p>
+                                                    <p>Kelurahan</p>
                                                     <?php
-                                                    $strQuery = "SELECT lowongan_id FROM lowongan";
+                                                    $strQuery = "SELECT idkel FROM kelurahan";
                                                     $query = mysqli_query($connection, $strQuery);
                                                     echo mysqli_num_rows($query); 
                                                 ?>
@@ -219,35 +213,12 @@
                                             </div>
                                             <div class="col-xs-7">
                                                 <div class="numbers">
-                                                    <p>Lamaran</p>
+                                                    <p>Sektor Usaha</p>
                                                     <?php
-                                                    $strQuery = "SELECT lamaran_id FROM lamaran";
+                                                    $strQuery = "SELECT id_Sektor FROM sektor_usaha";
                                                     $query = mysqli_query($connection, $strQuery);
                                                     echo mysqli_num_rows($query); 
                                                 ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="card">
-                                    <div class="content">
-                                        <div class="row">
-                                            <div class="col-xs-5">
-                                                <div class="icon-big icon-info text-center">
-                                                    <i class="fa fa-bank"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-7">
-                                                <div class="numbers">
-                                                    <p>Kota</p>
-                                                    <?php
-                                                    $strQuery = "SELECT kota_id FROM kota";
-                                                    $query = mysqli_query($connection, $strQuery);
-                                                    echo mysqli_num_rows($query); 
-                                                    ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -266,7 +237,7 @@
                     </div>
                     <div class="card col-md-3" style="margin-left: 14px; background-color: #00B16A;">
                         <div class="content">
-                            <a href="calonpekerja_restore.php" style="color: #FFFFFF;">
+                            <a href="pemilikusaha_restore.php" style="color: #FFFFFF;">
                                 Restore Database
                             </a>
                         </div>
@@ -278,7 +249,7 @@
                             &copy;
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Lowker Team</a>
+                            </script>, made with <i class="fa fa-heart heart"></i>
                         </div>
                     </div>
                 </footer>

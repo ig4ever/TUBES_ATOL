@@ -8,6 +8,6 @@
 		echo "<script language=javascript>alert('Terjadi Kesalahan Saat Menghapus Data Lamaran');</script>";	
 	}
 	
-	echo "<script language=javascript>document.location.href='../lamaran.php'</script>";
+	echo "<script language=javascript>document.location.href='../sektorusaha.php'</script>";
 	mysqli_close($connection);
 ?>

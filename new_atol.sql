@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2017 at 12:34 PM
+-- Generation Time: Jul 19, 2017 at 07:44 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -30,6 +30,13 @@ CREATE TABLE `admin` (
   `admin_id` int(11) NOT NULL,
   `admin_nama` varchar(51) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `admin_nama`) VALUES
+(53, 'admin');
 
 -- --------------------------------------------------------
 
@@ -58,6 +65,13 @@ CREATE TABLE `data_usaha` (
   `gambar5` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `data_usaha`
+--
+
+INSERT INTO `data_usaha` (`id_usaha`, `id_login`, `Nama_Usaha`, `Produk_Usaha`, `Produk_Utama`, `Alamat`, `Kecamatan`, `Kelurahan`, `Telp`, `Latitude`, `Longitude`, `Skala_Usaha`, `Sektor_Usaha`, `gambar1`, `gambar2`, `gambar3`, `gambar4`, `gambar5`) VALUES
+('1', 75, 'narkoba', 'dji sam soe', 'mie ketrek', 'bandung', '1', '1', '35355', '35245', '23523', '1', '1', 'aasd', 'asdas', 'asdasd', 'asdad', 'asdasd');
+
 -- --------------------------------------------------------
 
 --
@@ -69,6 +83,13 @@ CREATE TABLE `kecamatan` (
   `NamaKec` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `kecamatan`
+--
+
+INSERT INTO `kecamatan` (`Idkec`, `NamaKec`) VALUES
+('1', 'lengkong');
+
 -- --------------------------------------------------------
 
 --
@@ -78,8 +99,15 @@ CREATE TABLE `kecamatan` (
 CREATE TABLE `kelurahan` (
   `idkel` varchar(20) NOT NULL,
   `idKec` varchar(20) NOT NULL,
-  `Namakec` varchar(50) NOT NULL
+  `Namakel` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kelurahan`
+--
+
+INSERT INTO `kelurahan` (`idkel`, `idKec`, `Namakel`) VALUES
+('1', '1', 'cikawao');
 
 -- --------------------------------------------------------
 
@@ -99,8 +127,9 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`login_id`, `No_Ktp`, `Password`, `login_role`) VALUES
-(51, '1214901750', '202cb962ac59075b964b07152d234b70', 'Pemilik Usaha'),
-(52, '124551235236', '202cb962ac59075b964b07152d234b70', 'Pemilik Usaha');
+(53, '8758658', '21232f297a57a5a743894a0e4a801fc3', 'Admin'),
+(54, '123123123', '202cb962ac59075b964b07152d234b70', 'Pemilik Usaha'),
+(75, '107208205197509124', '202cb962ac59075b964b07152d234b70', 'Pemilik Usaha');
 
 -- --------------------------------------------------------
 
@@ -111,14 +140,14 @@ INSERT INTO `login` (`login_id`, `No_Ktp`, `Password`, `login_role`) VALUES
 CREATE TABLE `pemilik_usaha` (
   `pemilik_usaha_id` int(11) NOT NULL,
   `Nama` varchar(50) NOT NULL,
-  `Email` varchar(20) NOT NULL,
+  `Email` varchar(100) NOT NULL,
   `Alamat` varchar(100) NOT NULL,
   `Tempat_Lahir` varchar(20) NOT NULL,
   `Tanggal_Lahir` date NOT NULL,
   `No_Telp` varchar(14) NOT NULL,
   `Keterangan` varchar(20) NOT NULL,
-  `Photo_Ktp` varchar(50) NOT NULL,
-  `aktifasi` enum('Y','T') NOT NULL,
+  `Photo_Ktp` varchar(101) NOT NULL,
+  `aktifasi` enum('Aktif','Belum Aktif') NOT NULL,
   `kode` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -127,8 +156,8 @@ CREATE TABLE `pemilik_usaha` (
 --
 
 INSERT INTO `pemilik_usaha` (`pemilik_usaha_id`, `Nama`, `Email`, `Alamat`, `Tempat_Lahir`, `Tanggal_Lahir`, `No_Telp`, `Keterangan`, `Photo_Ktp`, `aktifasi`, `kode`) VALUES
-(51, 'Rakhmat', 'rahmatig4ever@gmail.', 'Jalan Pangarang Bawah IV, Cikawao, Bandung City, West Java, Indonesia', 'bandung', '2017-07-02', '', '', '', 'Y', '4e25c0c0adfa1d7795a6169722c7744c'),
-(52, 'Budi', 'rahmatig4ever@gmail.', 'Pangarengan, Subang Regency, West Java, Indonesia', 'bandung', '2017-07-11', '', '', '', 'Y', '28fa4a4d2cc690b0df818d549ba281a7');
+(54, 'Rakhmat Sabarudin', 'rahmatig4ever@gmail.com', 'Jalan Pangarang Bawah IV, Cikawao, Bandung City, West Java, Indonesia', 'Band', '1995-01-01', '4241622', 'Programmer', 'rakhmatsabarudin20170718012613.png', 'Aktif', 'eeca7903bc07df7517ba0b9bbd844260'),
+(75, 'Joko Purwanto', 'rahmatig4ever@gmail.com', 'Pangalengan, Bandung, West Java, Indonesia', 'Jakarta', '1997-01-01', '4245155', 'IOT', 'jokopurwanto20170718104201.png', 'Belum Aktif', '9aac807bc7134ac90b546615e5bb55f8');
 
 -- --------------------------------------------------------
 
@@ -141,6 +170,13 @@ CREATE TABLE `sektor_usaha` (
   `NamaSektor` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `sektor_usaha`
+--
+
+INSERT INTO `sektor_usaha` (`id_Sektor`, `NamaSektor`) VALUES
+('1', 'besar');
+
 -- --------------------------------------------------------
 
 --
@@ -151,6 +187,13 @@ CREATE TABLE `skala_usaha` (
   `id_skala` varchar(20) NOT NULL,
   `NamaSkala` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `skala_usaha`
+--
+
+INSERT INTO `skala_usaha` (`id_skala`, `NamaSkala`) VALUES
+('1', 'kexc');
 
 --
 -- Indexes for dumped tables
@@ -220,7 +263,7 @@ ALTER TABLE `skala_usaha`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 --
 -- Constraints for dumped tables
 --
