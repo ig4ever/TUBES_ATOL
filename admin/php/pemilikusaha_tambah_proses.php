@@ -31,7 +31,7 @@
             $temp = explode(".", $_FILES["photo_ktp"]["name"]);
             $cv = strtolower($cv . date('YmdHis') . "." . end($temp));
             $target_file = $target_dir . basename($cv);
-            if (move_uploaded_file($_FILES['photo_ktp']['tmp_name'], $target_file) && isset($_POST['submit'])) {
+            if (move_uploaded_file($_FILES['photo_ktp']['tmp_name'], $target_file) && isset($_POST['submit']) && $status == "Aktif") {
                 define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
 
                 $id = date('is');
@@ -78,6 +78,32 @@
                 if ($mail->Send() && $query) {
                     mysqli_commit($connection);
                     echo "<script language=javascript>alert('Registrasi Berhasil Silahkan Cek Email');</script>";
+                    echo "<script language=javascript>document.location.href='../pemilikusaha_tambah.php'</script>";
+                } else {
+                    mysqli_rollback($connection);
+                    echo "<script language=javascript>alert('Registrasi Gagal');</script>";
+                    echo "<script language=javascript>document.location.href='../pemilikusaha_tambah.php'</script>";
+                }
+            }else{
+                $kode    = md5(uniqid(rand()));
+                $strQuery = "INSERT INTO pemilik_usaha VALUES( 
+                    '$login_id',
+                    '$nama', 
+                    '$email',
+                    '$alamat', 
+                    '$tempat', 
+                    '$ttl',  
+                    '$telepon',
+                    '$ket',
+                    '$cv',
+                    '$status',
+                    '$kode'
+                )";
+
+                $query = mysqli_query($connection, $strQuery);
+                if ($query) {
+                    mysqli_commit($connection);
+                    echo "<script language=javascript>alert('Registrasi Berhasil');</script>";
                     echo "<script language=javascript>document.location.href='../pemilikusaha_tambah.php'</script>";
                 } else {
                     mysqli_rollback($connection);

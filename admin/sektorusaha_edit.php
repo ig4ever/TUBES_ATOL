@@ -13,12 +13,12 @@
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
         $nama = "";
-        $strQuery = "SELECT kota_id, kota_nama FROM kota WHERE kota_id = '$id'";
+        $strQuery = "SELECT id_sektor, namasektor FROM sektor_usaha WHERE id_sektor = '$id'";
         $query = mysqli_query($connection, $strQuery);
         if($query){
             $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
-            $id = $result['kota_id'];
-            $nama = $result['kota_nama'];
+            $id = $result['id_sektor'];
+            $nama = $result['namasektor'];
         }
     }
 ?>
@@ -44,7 +44,7 @@
                     <div class="logo">
                         <!--<img src="../img/logo.png" width="60px" />-->
                         <a href="#" class="simple-text">
-                        Lowker Admin
+                        Admin
                     </a>
                     </div>
                     <ul class="nav">
@@ -57,37 +57,37 @@
                         <li>
                             <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
-                                <p>Calon Pekerja</p>
+                                <p>Pemilik Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
-                                <p>Perusahaan</p>
+                                <p>Data Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
-                                <p>Kategori</p>
+                                <p>Kecamatan</p>
                             </a>
                         </li>
                         <li>
                             <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
-                                <p>Lowongan</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="sektorusaha.php">
-                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Lamaran</p>
+                                <p>Kelurahan</p>
                             </a>
                         </li>
                         <li class="active">
-                            <a href="kota.php">
-                                <i class="fa fa-bank" style="font-size: 18px;"></i>
-                                <p>Kota</p>
+                            <a href="sektorusaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Sektor Usaha</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
                             </a>
                         </li>
                     </ul>
@@ -125,7 +125,7 @@
                     </div>
                 </nav>
                 <div class="content">
-                     <form method="POST" action="php/kota_edit_proses.php">
+                     <form method="POST" action="php/sektorusaha_edit_proses.php">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-3">
@@ -139,8 +139,8 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Nama Kota</label>
-                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Kota" value="<?php echo "$nama"?>"/>
+                                                        <label>Nama Sektor Usaha</label>
+                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Sektor Usaha" value="<?php echo "$nama"?>"/>
                                                     </div>
                                                 </div>
                                                 <div class="text-center" style="margin-bottom: 34px;">
@@ -156,16 +156,6 @@
                         </div>
                     </form>
                 </div>
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="copyright pull-right">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Lowker Team</a>
-                        </div>
-                    </div>
-                </footer>
             </div>
         </div>
         <script src="../js/jquery.min.js" type="text/javascript"></script>

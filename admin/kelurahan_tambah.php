@@ -45,37 +45,37 @@
                         <li>
                             <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
-                                <p>Calon Pekerja</p>
+                                <p>Pemilik Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
-                                <p>Perusahaan</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kecamatan.php">
-                                <i class="fa fa-tags" style="font-size: 18px;"></i>
-                                <p>Kategori</p>
+                                <p>Data Usaha</p>
                             </a>
                         </li>
                         <li class="active">
-                            <a href="lowongan.php">
+                            <a href="kecamatan.php">
+                                <i class="fa fa-tags" style="font-size: 18px;"></i>
+                                <p>Kecamatan</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
-                                <p>Lowongan</p>
+                                <p>Kelurahan</p>
                             </a>
                         </li>
                         <li>
                             <a href="sektorusaha.php">
                                 <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Lamaran</p>
+                                <p>Sektor Usaha</p>
                             </a>
                         </li>
                         <li>
-                            <a href="kota.php">
-                                <i class="fa fa-bank" style="font-size: 18px;"></i>
-                                <p>Kota</p>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
                             </a>
                         </li>
                     </ul>
@@ -91,7 +91,7 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Lowongan</a>
+                            <a class="navbar-brand" href="#">Kelurahan</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -121,60 +121,30 @@
                                 <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Tambah Lowongan</h4>
+                                            <h4 class="title">Tambah Kelurahan</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Perusahaan</label>
-                                                        <select class="form-control border-input" name="perusahaan_id">
+                                                        <label>No. KTP</label>
+                                                        <select class="form-control border-input" name="id" onchange="showUser(this.value)">
+                                                            <option value=""></option>
                                                             <?php
-                                                                $strQuery = "SELECT perusahaan_id, perusahaan_nama FROM perusahaan";
-                                                                $query = mysqli_query($connection, $strQuery);
-                                                                while($result = mysqli_fetch_assoc($query)){
-                                                                    echo "<option value=$result[perusahaan_id]>$result[perusahaan_nama]</option>";
-                                                                }
+                                                            $strQuery = "SELECT idkec, namakec FROM kecamatan ";
+                                                            $query = mysqli_query($connection, $strQuery);
+                                                            $cek = true;
+                                                            while($subresult = mysqli_fetch_assoc($query)) {
+                                                                echo "<option value=$subresult[idkec]>$subresult[namakec]</option>";
+                                                            }
                                                             ?>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Judul Lowongan</label>
-                                                        <input type="text" class="form-control border-input" name="judul" placeholder="Judul Lowongan" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Kategori</label>
-                                                        <select class="form-control border-input" name="kategori_id">
-                                                            <?php
-                                                                $strQuery = "SELECT kategori_id, kategori_nama FROM kategori";
-                                                                $query = mysqli_query($connection, $strQuery);
-                                                                while($result = mysqli_fetch_assoc($query)){
-                                                                    echo "<option value=$result[kategori_id]>$result[kategori_nama]</option>";
-                                                                }
-                                                            ?>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Tanggal Buka</label>
-                                                        <input type="date" class="form-control border-input" name="tgl_buka" placeholder="Tanggal Buka" value="<?php echo date('Y-m-d');?>"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Tanggal Tutup</label>
-                                                        <input type="date" class="form-control border-input" name="tgl_tutup" placeholder="tgl_tutup" value="<?php echo date('Y-m-d');?>"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Deskripsi</label>
-                                                        <textarea class="form-control border-input" name="deskripsi" placeholder="Deskripsi"></textarea>
+                                                        <label>Nama Kelurahan</label>
+                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Kelurahan" />
                                                     </div>
                                                 </div>
                                                 <div class="text-center" style="margin-bottom: 34px;">

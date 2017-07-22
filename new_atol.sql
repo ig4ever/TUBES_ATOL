@@ -45,19 +45,19 @@ INSERT INTO `admin` (`admin_id`, `admin_nama`) VALUES
 --
 
 CREATE TABLE `data_usaha` (
-  `id_usaha` varchar(20) NOT NULL,
+  `id_usaha` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `id_login` int(11) NOT NULL,
   `Nama_Usaha` varchar(30) NOT NULL,
   `Produk_Usaha` varchar(50) NOT NULL,
   `Produk_Utama` varchar(40) NOT NULL,
   `Alamat` varchar(50) NOT NULL,
-  `Kecamatan` varchar(20) NOT NULL,
-  `Kelurahan` varchar(20) NOT NULL,
+  `Kecamatan` int(20) NOT NULL,
+  `Kelurahan` int(20) NOT NULL,
   `Telp` varchar(14) NOT NULL,
   `Latitude` varchar(20) NOT NULL,
   `Longitude` varchar(20) NOT NULL,
-  `Skala_Usaha` varchar(20) NOT NULL,
-  `Sektor_Usaha` varchar(20) NOT NULL,
+  `Skala_Usaha` int(20) NOT NULL,
+  `Sektor_Usaha` int(20) NOT NULL,
   `gambar1` varchar(20) NOT NULL,
   `gambar2` varchar(20) NOT NULL,
   `gambar3` varchar(20) NOT NULL,
@@ -79,7 +79,7 @@ INSERT INTO `data_usaha` (`id_usaha`, `id_login`, `Nama_Usaha`, `Produk_Usaha`, 
 --
 
 CREATE TABLE `kecamatan` (
-  `Idkec` varchar(20) NOT NULL,
+  `Idkec` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `NamaKec` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -97,8 +97,8 @@ INSERT INTO `kecamatan` (`Idkec`, `NamaKec`) VALUES
 --
 
 CREATE TABLE `kelurahan` (
-  `idkel` varchar(20) NOT NULL,
-  `idKec` varchar(20) NOT NULL,
+  `idkel` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `idKec` int(20) NOT NULL,
   `Namakel` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -166,7 +166,7 @@ INSERT INTO `pemilik_usaha` (`pemilik_usaha_id`, `Nama`, `Email`, `Alamat`, `Tem
 --
 
 CREATE TABLE `sektor_usaha` (
-  `id_Sektor` varchar(20) NOT NULL,
+  `id_Sektor` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `NamaSektor` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -184,7 +184,7 @@ INSERT INTO `sektor_usaha` (`id_Sektor`, `NamaSektor`) VALUES
 --
 
 CREATE TABLE `skala_usaha` (
-  `id_skala` varchar(20) NOT NULL,
+  `id_skala` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `NamaSkala` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -210,7 +210,6 @@ ALTER TABLE `admin`
 -- Indexes for table `data_usaha`
 --
 ALTER TABLE `data_usaha`
-  ADD PRIMARY KEY (`id_usaha`),
   ADD KEY `fk_pemilik_usaha_data` (`id_login`),
   ADD KEY `Kecamatan` (`Kecamatan`),
   ADD KEY `Kelurahan` (`Kelurahan`),
@@ -218,16 +217,9 @@ ALTER TABLE `data_usaha`
   ADD KEY `Sektor_Usaha` (`Sektor_Usaha`);
 
 --
--- Indexes for table `kecamatan`
---
-ALTER TABLE `kecamatan`
-  ADD PRIMARY KEY (`Idkec`);
-
---
 -- Indexes for table `kelurahan`
 --
 ALTER TABLE `kelurahan`
-  ADD PRIMARY KEY (`idkel`),
   ADD KEY `idKec` (`idKec`);
 
 --
@@ -242,18 +234,6 @@ ALTER TABLE `login`
 --
 ALTER TABLE `pemilik_usaha`
   ADD PRIMARY KEY (`pemilik_usaha_id`);
-
---
--- Indexes for table `sektor_usaha`
---
-ALTER TABLE `sektor_usaha`
-  ADD PRIMARY KEY (`id_Sektor`);
-
---
--- Indexes for table `skala_usaha`
---
-ALTER TABLE `skala_usaha`
-  ADD PRIMARY KEY (`id_skala`);
 
 --
 -- AUTO_INCREMENT for dumped tables

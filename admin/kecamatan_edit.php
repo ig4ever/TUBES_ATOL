@@ -13,12 +13,12 @@
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
         $nama = "";
-        $strQuery = "SELECT kategori_id, kategori_nama FROM kategori WHERE kategori_id = '$id'";
+        $strQuery = "SELECT idKec, namakec FROM kecamatan WHERE idKec = '$id'";
         $query = mysqli_query($connection, $strQuery);
         if($query){
             $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
-            $id = $result['kategori_id'];
-            $nama = $result['kategori_nama'];
+            $id = $result['idKec'];
+            $nama = $result['namakec'];
         }
     }
 ?>
@@ -57,37 +57,37 @@
                         <li>
                             <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
-                                <p>Calon Pekerja</p>
+                                <p>Pemilik Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
-                                <p>Perusahaan</p>
+                                <p>Data Usaha</p>
                             </a>
                         </li>
                         <li class="active">
                             <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
-                                <p>Kategori</p>
+                                <p>Kecamatan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lowongan.php">
+                            <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
-                                <p>Lowongan</p>
+                                <p>Kelurahan</p>
                             </a>
                         </li>
                         <li>
                             <a href="sektorusaha.php">
                                 <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Lamaran</p>
+                                <p>Sektor Usaha</p>
                             </a>
                         </li>
                         <li>
-                            <a href="kota.php">
-                                <i class="fa fa-bank" style="font-size: 18px;"></i>
-                                <p>Kota</p>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
                             </a>
                         </li>
                     </ul>
@@ -103,7 +103,7 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Kategori</a>
+                            <a class="navbar-brand" href="#">Kecamatan</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -133,13 +133,13 @@
                                 <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Edit Kategori</h4>
+                                            <h4 class="title">Edit Kecamtan</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Nama Kategori</label>
+                                                        <label>Nama Kecamatan</label>
                                                         <input type="text" class="form-control border-input" name="nama" placeholder="Nama Kategori" value="<?php echo "$nama"?>"/>
                                                     </div>
                                                 </div>

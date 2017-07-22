@@ -72,6 +72,12 @@
                                 <p>Sektor Usaha</p>
                             </a>
                         </li>
+                        <li>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -85,7 +91,7 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Perusahaan</a>
+                            <a class="navbar-brand" href="#">Data Usaha</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">

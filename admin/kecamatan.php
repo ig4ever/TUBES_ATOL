@@ -72,6 +72,12 @@
                                 <p>Sektor Usaha</p>
                             </a>
                         </li>
+                        <li>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -85,7 +91,7 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Kategori</a>
+                            <a class="navbar-brand" href="#">Kecamatan</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -121,12 +127,12 @@
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                            <h4 class="modal-title" id="myModalLabel">Masukkan Nama Kategori</h4>
+                                                            <h4 class="modal-title" id="myModalLabel">Masukkan Nama Kecamatan</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label>Nama Kategori</label>
-                                                                <input type="text" class="form-control border-input" name="nama" placeholder="Nama Kategori" />
+                                                                <label>Nama Kecamatan</label>
+                                                                <input type="text" class="form-control border-input" name="nama" placeholder="Nama Kecamatan" />
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
@@ -145,8 +151,8 @@
                                             <?php
                                             }
                                         ?>
-                                                <h4 class="title">Data Kategori</h4>
-                                                <p class="category">List dari semua kategori pekerjaan</p>
+                                                <h4 class="title">Data Kecamatan</h4>
+                                                <p class="category">List dari data kecamtan</p>
                                     </div>
                                     <div class="content table-responsive table-full-width">
                                         <table class="table table-striped">
@@ -158,17 +164,17 @@
                                             <tbody>
                                                 <?php
                                                     if(isset($_GET['nama'])){
-                                                        $strQuery = "SELECT kategori_id, kategori_nama FROM kategori WHERE kategori_nama LIKE '%$_GET[nama]%' ORDER BY kategori_id DESC";
+                                                        $strQuery = "SELECT idKec, NamaKec FROM kecamatan WHERE NamaKec LIKE '%$_GET[nama]%' ORDER BY idKec DESC";
                                                     }else {
-                                                        $strQuery = "SELECT kategori_id, kategori_nama FROM kategori ORDER BY kategori_id DESC";
+                                                        $strQuery = "SELECT idKec, NamaKec FROM kecamatan ORDER BY idKec DESC";
                                                     }
                                                     $query = mysqli_query($connection, $strQuery);
                                                     $i = 0;
                                                     while($result = mysqli_fetch_assoc($query)){
                                                         echo "<tr>";
-                                                        echo "<td>$result[kategori_id]</td>";
-                                                        echo "<td>$result[kategori_nama]</td>";
-                                                        echo "<td><a href='kategori_edit.php?id=$result[kategori_id]'>Edit</a>";
+                                                        echo "<td>$result[idKec]</td>";
+                                                        echo "<td>$result[NamaKec]</td>";
+                                                        echo "<td><a href='kecamatan_edit.php?id=$result[idKec]'>Edit</a>";
                                                         echo "&nbsp;&nbsp;&nbsp;";
                                                         echo "<a href=# data-toggle=modal data-target=#delete$i>Delete</a></td>";
                                                         echo "</tr>";
@@ -183,7 +189,7 @@
                                                                         <h4 class="modal-title" id="myModalLabel">Apakah Anda Yakin ?</h4>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <input type="hidden" name="id" value="<?php echo " $result[kategori_id] ";?>" />
+                                                                        <input type="hidden" name="id" value="<?php echo " $result[idKec] ";?>" />
                                                                         <input type="submit" value="Yes" class="btn btn-info btn-fill"/>
                                                                         <button type="button" class="btn btn-default btn-fill" data-dismiss="modal">No</button>
                                                                     </div>

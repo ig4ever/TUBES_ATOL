@@ -45,37 +45,37 @@
                         <li>
                             <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
-                                <p>Calon Pekerja</p>
+                                <p>Pemilik Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
-                                <p>Perusahaan</p>
+                                <p>Data Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
-                                <p>Kategori</p>
+                                <p>Kecamatan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lowongan.php">
+                            <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
-                                <p>Lowongan</p>
+                                <p>Kelurahan</p>
                             </a>
                         </li>
                         <li class="active">
                             <a href="sektorusaha.php">
                                 <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Lamaran</p>
+                                <p>Sektor Usaha</p>
                             </a>
                         </li>
                         <li>
-                            <a href="kota.php">
-                                <i class="fa fa-bank" style="font-size: 18px;"></i>
-                                <p>Kota</p>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
                             </a>
                         </li>
                     </ul>
@@ -113,7 +113,7 @@
                     </div>
                 </nav>
                 <div class="content">
-                     <form method="POST" action="php/lamaran_tambah_proses.php">
+                     <form method="POST" action="php/sektorusaha_tambah_proses.php">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-3">
@@ -121,46 +121,14 @@
                                 <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Tambah lamaran</h4>
+                                            <h4 class="title">Tambah Sektor Usaha</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Lowongan</label>
-                                                        <select class="form-control border-input" name="lowongan_id">
-                                                            <?php
-                                                                $strQuery = "SELECT lowongan_id, lowongan_judul FROM lowongan";
-                                                                $query = mysqli_query($connection, $strQuery);
-                                                                while($result = mysqli_fetch_assoc($query)){
-                                                                    echo "<option value=$result[lowongan_id]>$result[lowongan_judul]</option>";
-                                                                }
-                                                            ?>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Calon Pekerja</label>
-                                                        <select class="form-control border-input" name="calon_pekerja_id">
-                                                            <?php
-                                                                $strQuery = "SELECT calon_pekerja_id, calon_pekerja_nama_lengkap FROM calon_pekerja";
-                                                                $query = mysqli_query($connection, $strQuery);
-                                                                while($result = mysqli_fetch_assoc($query)){
-                                                                    echo "<option value=$result[calon_pekerja_id]>$result[calon_pekerja_nama_lengkap]</option>";
-                                                                }
-                                                            ?>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Status Lolos</label>
-                                                        <select class="form-control border-input" name="status">
-                                                            <option value="Menunggu">Menunggu</option>
-                                                            <option value="Lolos">Lolos</option>
-                                                            <option value="Tidak Lolos">Tidak Lolos</option>
-                                                        </select>
+                                                        <label>Nama Sektor Usaha</label>
+                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Sektor Usaha" />
                                                     </div>
                                                 </div>
                                                 <div class="text-center" style="margin-bottom: 34px;">
@@ -175,16 +143,6 @@
                         </div>
                     </form>
                 </div>
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="copyright pull-right">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>, made with <i class="fa fa-heart heart"></i>
-                        </div>
-                    </div>
-                </footer>
             </div>
         </div>
         <script src="../js/jquery.min.js" type="text/javascript"></script>

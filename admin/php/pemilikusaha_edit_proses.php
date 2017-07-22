@@ -1,5 +1,9 @@
 <?php
-	require "../../php/connection.php";
+    date_default_timezone_set('Etc/UTC');
+    require "../../php/connection.php";
+    require_once('../../library/class.phpmailer.php'); //menginclude librari phpmailer
+    require '../../library/PHPMailerAutoload.php';
+
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
@@ -17,81 +21,189 @@
 	mysqli_begin_transaction($connection, MYSQLI_TRANS_START_READ_WRITE);
 	mysqli_autocommit($connection, FALSE);
 	if($_FILES['photo_ktp']['size'] == 0) {
-		$strQuery = "UPDATE pemilik_usaha SET 
-		nama = '$nama', 
-		alamat = '$alamat',  
-		email = '$email', 
-		tempat_lahir = '$tempat_lahir', 
-		tanggal_lahir = '$tanggal_lahir', 
-		aktifasi = '$status',
-		no_telp = '$telepon',  
-		keterangan = '$keterangan'
-		WHERE pemilik_usaha_id = $id";
-		$query = mysqli_query($connection, $strQuery);
-		if($query){
-			if(!empty($password)){
-				$encPassword = md5($password);
-				$strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
-			}else {
-				$strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
-			}	
-			
-			$query = mysqli_query($connection, $strQuery);
-			if($query){
-				mysqli_commit($connection);
-                echo "<script language=javascript>alert('Berhasil Mengupdate Data Pemilik Usaha');</script>";
-			}else {
-				mysqli_rollback($connection);
-				echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
-			}
-		}else{
-			mysqli_rollback($connection);
-			echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
-		}
-	}else {
-		$target_dir = "../../upload/cv/";
-		$photoKtp = str_replace(" ","", $nama);
-		$temp = explode(".", $_FILES["photo_ktp"]["name"]);
-		$photoKtp = strtolower($photoKtp . date('YmdHis') . "." . end($temp));
-		$target_file = $target_dir . basename($photoKtp);
-		if (move_uploaded_file($_FILES['photo_ktp']['tmp_name'], $target_file)) {
-			$strQuery = "UPDATE pemilik_usaha SET 
-		nama = '$nama', 
-		alamat = '$alamat',  
-		email = '$email', 
-		tempat_lahir = '$tempat_lahir', 
-		tanggal_lahir = '$tanggal_lahir', 
-		aktifasi = '$status',
-		no_telp = '$telepon',  
-		keterangan = '$keterangan',  
-		photo_ktp = '$photoKtp' 
-		WHERE pemilik_usaha_id = $id";
-			$query = mysqli_query($connection, $strQuery);
-			if($query){				
-				if(!empty($password)){
-					$encPassword = md5($password);
-					$strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
-				}else {
-					$strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
-				}	
-				
-				$query = mysqli_query($connection, $strQuery);
-				if($query){
-					mysqli_commit($connection);
+        if ($status == "Aktif") {
+            define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
+
+            //$id = date('is');
+            //$kode = md5(uniqid(rand()));
+            //$password = md5($password);
+
+            $mail = new PHPMailer();
+            $mail->IsSMTP();    // menggunakan SMTP
+            $mail->SMTPDebug = 2;   // mengaktifkan debug SMTP
+
+            //Set the encryption system to use - ssl (deprecated) or tls
+            $mail->SMTPSecure = 'tls';
+
+            $mail->SMTPAuth = true;   // mengaktifkan Autentifikasi SMTP
+            $mail->Host = 'smtp.gmail.com'; // Gunakan Ip Shared Address Hosting Anda
+            $mail->Port = 587;
+            $mail->Username = "andrewnaker169@gmail.com"; // username email akun
+            $mail->Password = "storyofmylove";        // password akun
+
+            $mail->SetFrom('andrewnaker169@gmail.com', "Hello '$nama'");
+
+            $mail->Subject = "Hello";
+            $mail->Body = 'Klik link berikut untuk verifikasi dan mengaktifkan akun : ';
+            $mail->Body .= ROOT . "loginActivated.php?email=" . $email . "&kode=$kode&username=" . $username;
+
+            $address = $email; //email tujuan
+            $mail->AddAddress($address, "Hello (Reciever name)");
+
+            $strQuery = "UPDATE pemilik_usaha SET 
+            nama = '$nama', 
+            alamat = '$alamat',  
+            email = '$email', 
+            tempat_lahir = '$tempat_lahir', 
+            tanggal_lahir = '$tanggal_lahir', 
+            aktifasi = '$status',
+            no_telp = '$telepon',  
+            keterangan = '$keterangan'
+            WHERE pemilik_usaha_id = $id";
+            $query = mysqli_query($connection, $strQuery);
+            if ($query) {
+                if (!empty($password)) {
+                    $encPassword = md5($password);
+                    $strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
+                } else {
+                    $strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
+                }
+
+                $query = mysqli_query($connection, $strQuery);
+                if ($query && $mail->Send()) {
+                    mysqli_commit($connection);
                     echo "<script language=javascript>alert('Berhasil Mengupdate Data Pemilik Usaha');</script>";
-				}else {
-					mysqli_rollback($connection);
-					echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
-				}
-			}else{
-				mysqli_rollback($connection);
-				echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
-			}
-		}else{
-			mysqli_rollback($connection);
-			echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupload Foto KTP');</script>";
-		}
-	}
+                } else {
+                    mysqli_rollback($connection);
+                    echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
+                }
+            }
+        }else{
+            $strQuery = "UPDATE pemilik_usaha SET 
+            nama = '$nama', 
+            alamat = '$alamat',  
+            email = '$email', 
+            tempat_lahir = '$tempat_lahir', 
+            tanggal_lahir = '$tanggal_lahir', 
+            aktifasi = '$status',
+            no_telp = '$telepon',  
+            keterangan = '$keterangan'
+            WHERE pemilik_usaha_id = $id";
+            $query = mysqli_query($connection, $strQuery);
+            if ($query) {
+                if (!empty($password)) {
+                    $encPassword = md5($password);
+                    $strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
+                } else {
+                    $strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
+                }
+
+                $query = mysqli_query($connection, $strQuery);
+                if ($query) {
+                    mysqli_commit($connection);
+                    echo "<script language=javascript>alert('Berhasil Mengupdate Data Pemilik Usaha');</script>";
+                } else {
+                    mysqli_rollback($connection);
+                    echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
+                }
+            }
+        }
+	}else {
+        $target_dir = "../../upload/cv/";
+        $photoKtp = str_replace(" ", "", $nama);
+        $temp = explode(".", $_FILES["photo_ktp"]["name"]);
+        $photoKtp = strtolower($photoKtp . date('YmdHis') . "." . end($temp));
+        $target_file = $target_dir . basename($photoKtp);
+        if (move_uploaded_file($_FILES['photo_ktp']['tmp_name'], $target_file) && $status == "Aktif") {
+            define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
+
+//            $id = date('is');
+//            $kode = md5(uniqid(rand()));
+//            $password = md5($password);
+
+            $mail = new PHPMailer();
+            $mail->IsSMTP();    // menggunakan SMTP
+            $mail->SMTPDebug = 2;   // mengaktifkan debug SMTP
+
+            //Set the encryption system to use - ssl (deprecated) or tls
+            $mail->SMTPSecure = 'tls';
+
+            $mail->SMTPAuth = true;   // mengaktifkan Autentifikasi SMTP
+            $mail->Host = 'smtp.gmail.com'; // Gunakan Ip Shared Address Hosting Anda
+            $mail->Port = 587;
+            $mail->Username = "andrewnaker169@gmail.com"; // username email akun
+            $mail->Password = "storyofmylove";        // password akun
+
+            $mail->SetFrom('andrewnaker169@gmail.com', "Hello '$nama'");
+
+            $mail->Subject = "Hello";
+            $mail->Body = 'Klik link berikut untuk verifikasi dan mengaktifkan akun : ';
+            $mail->Body .= ROOT . "loginActivated.php?email=" . $email . "&kode=$kode&username=" . $username;
+
+            $address = $email; //email tujuan
+            $mail->AddAddress($address, "Hello (Reciever name)");
+
+            $strQuery = "UPDATE pemilik_usaha SET 
+            nama = '$nama', 
+            alamat = '$alamat',  
+            email = '$email', 
+            tempat_lahir = '$tempat_lahir', 
+            tanggal_lahir = '$tanggal_lahir', 
+            aktifasi = '$status',
+            no_telp = '$telepon',  
+            keterangan = '$keterangan',  
+            photo_ktp = '$photoKtp' 
+            WHERE pemilik_usaha_id = $id";
+            $query = mysqli_query($connection, $strQuery);
+            if ($query) {
+                if (!empty($password)) {
+                    $encPassword = md5($password);
+                    $strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
+                } else {
+                    $strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
+                }
+
+                $query = mysqli_query($connection, $strQuery);
+                if ($query && $mail->Send()) {
+                    mysqli_commit($connection);
+                    echo "<script language=javascript>alert('Berhasil Mengupdate Data Pemilik Usaha Silahkan Cek Email');</script>";
+                } else {
+                    mysqli_rollback($connection);
+                    echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
+                }
+            }
+        }else {
+                $strQuery = "UPDATE pemilik_usaha SET 
+            nama = '$nama', 
+            alamat = '$alamat',  
+            email = '$email', 
+            tempat_lahir = '$tempat_lahir', 
+            tanggal_lahir = '$tanggal_lahir', 
+            aktifasi = '$status',
+            no_telp = '$telepon',  
+            keterangan = '$keterangan',  
+            photo_ktp = '$photoKtp' 
+            WHERE pemilik_usaha_id = $id";
+                $query = mysqli_query($connection, $strQuery);
+                if ($query) {
+                    if (!empty($password)) {
+                        $encPassword = md5($password);
+                        $strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
+                    } else {
+                        $strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
+                    }
+
+                    $query = mysqli_query($connection, $strQuery);
+                    if ($query) {
+                        mysqli_commit($connection);
+                        echo "<script language=javascript>alert('Berhasil Mengupdate Data Pemilik Usaha');</script>";
+                    } else {
+                        mysqli_rollback($connection);
+                        echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
+                    }
+                }
+            }
+        }
 
 	mysqli_autocommit($connection, TRUE);
 	echo "<script language=javascript>document.location.href='../pemilikusaha_edit.php?id=$id' </script>";

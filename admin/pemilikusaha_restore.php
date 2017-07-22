@@ -79,6 +79,12 @@
                                 <p>Kota</p>
                             </a>
                         </li>
+                        <li>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

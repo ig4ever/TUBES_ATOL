@@ -72,6 +72,12 @@
                                 <p>Sektor Usaha</p>
                             </a>
                         </li>
+                        <li>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -85,7 +91,7 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Lowongan</a>
+                            <a class="navbar-brand" href="#">Kelurahan</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -121,12 +127,12 @@
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                            <h4 class="modal-title" id="myModalLabel">Masukkan Judul Lowongan atau Nama Perusahaan</h4>
+                                                            <h4 class="modal-title" id="myModalLabel">Masukkan Nama Kelurahan</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label>Judul Lowongan atau Nama Perusahaan</label>
-                                                                <input type="text" class="form-control border-input" name="nama" placeholder="Judul Lowongan atau Nama Perusahaan" />
+                                                                <label>Nama Kelurahan</label>
+                                                                <input type="text" class="form-control border-input" name="nama" placeholder="Nama Kelurahan" />
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
@@ -145,54 +151,30 @@
                                             <?php
                                             }
                                         ?>
-                                                <h4 class="title">Data Lowongan</h4>
-                                                <p class="category">List dari semua lowongan yang terpublish</p>
+                                                <h4 class="title">Data Kelurahan</h4>
+                                                <p class="category">List dari data kelurahan</p>
                                     </div>
                                     <div class="content table-responsive table-full-width">
                                         <table class="table table-striped">
                                             <thead>
                                                 <th>ID</th>
-                                                <th>Perusahaan</th>
-                                                <th>Judul</th>
-                                                <th>Kategori</th>
-                                                <th>Tanggal Buka</th>
-                                                <th>Tanggal Tutup</th>
+                                                <th>Nama</th>
                                                 <th>Actions</th>
                                             </thead>
                                             <tbody>
                                                 <?php
                                                     if(isset($_GET['nama'])){
-                                                        $strQuery = "SELECT l.lowongan_id, p.perusahaan_id, p.perusahaan_nama, k.kategori_id, k.kategori_nama,
-                                                        l.lowongan_judul, l.lowongan_deskripsi, l.lowongan_tgl_buka, l.lowongan_tgl_tutup
-                                                        FROM lowongan l INNER JOIN pemilikusaha p ON l.perusahaan_id = p.perusahaan_id
-                                                        INNER JOIN kategori k ON l.kategori_id = k.kategori_ID 
-                                                        WHERE l.lowongan_judul LIKE '%$_GET[nama]%' OR p.perusahaan_nama LIKE '%$_GET[nama]%' ORDER BY lowongan_id DESC";
-                                                    }else if(isset($_GET['pemilikusaha'])){
-                                                        $strQuery = "SELECT l.lowongan_id, p.perusahaan_id, p.perusahaan_nama, k.kategori_id, k.kategori_nama,
-                                                        l.lowongan_judul, l.lowongan_deskripsi, l.lowongan_tgl_buka, l.lowongan_tgl_tutup
-                                                        FROM lowongan l INNER JOIN pemilikusaha p ON l.perusahaan_id = p.perusahaan_id
-                                                        INNER JOIN kategori k ON l.kategori_id = k.kategori_ID 
-                                                        WHERE p.perusahaan_id = d$_GET[perusahaan]atausaha ORDER BY lowongan_id DESC";
+                                                        $strQuery = "SELECT idkel, NamaKel FROM kelurahan WHERE NamaKel LIKE '%$_GET[nama]%' ORDER BY idkel DESC";
                                                     }else {
-                                                        $strQuery = "SELECT l.lowongan_id, p.perusahaan_id, p.perusahaan_nama, k.kategori_id, k.kategori_nama,
-                                                        l.lowongan_judul, l.lowongan_deskripsi, l.lowongan_tgl_buka, l.lowongan_tgl_tutup
-                                                        FROM lowongan l INNEdatausahausahaan p ON l.perusahaan_id = p.perusahaan_id
-                                                        INNER JOIN kategori k ON l.kategori_id = k.kategori_ID 
-                                                        ORDER BY lowongan_id DESC";
+                                                        $strQuery = "SELECT idkel, NamaKel FROM kelurahan ORDER BY idkel DESC";
                                                     }
                                                     $query = mysqli_query($connection, $strQuery);
                                                     $i = 0;
                                                     while($result = mysqli_fetch_assoc($query)){
                                                         echo "<tr>";
-                                                        echo "<td>$result[lowongan_id]</td>";
-                                                        echo "<td>$result[perusahaan_nama]</td>";
-                                                        echo "<td>$result[lowongan_judul]</td>";
-                                                        echo "<td>$result[kategori_nama]</td>";
-                                                        echo "<td>$result[lowongan_tgl_buka]</td>";
-                                                        echo "<td>$result[lowongan_tgl_tutup]</td>";
-                                                        echo "<td><a href='lowongan_detail.php?id=$result[lowongan_id]'>Detail</a>";
-                                                        echo "&nbsp;&nbsp;&nbsp;";
-                                                        echo "<a href='lowongan_edit.php?id=$result[lowongan_id]'>Edit</a>";
+                                                        echo "<td>$result[idkel]</td>";
+                                                        echo "<td>$result[NamaKel]</td>";
+                                                        echo "<td><a href='kelurahan_edit.php?id=$result[idkel]'>Edit</a>";
                                                         echo "&nbsp;&nbsp;&nbsp;";
                                                         echo "<a href=# data-toggle=modal data-target=#delete$i>Delete</a></td>";
                                                         echo "</tr>";

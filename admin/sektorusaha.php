@@ -76,6 +76,12 @@
                                 <p>Sektor Usaha</p>
                             </a>
                         </li>
+                        <li>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -89,7 +95,7 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Lamaran</a>
+                            <a class="navbar-brand" href="#">Sektor Usaha</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -125,12 +131,12 @@
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                            <h4 class="modal-title" id="myModalLabel">Masukkan Judul Lowongan atau Nama Calon Pekerja</h4>
+                                                            <h4 class="modal-title" id="myModalLabel">Masukkan Nama Sektor Usaha</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label>Judul Lowongan atau Nama Calon Pekerja</label>
-                                                                <input type="text" class="form-control border-input" name="nama" placeholder="Judul Lowongan atau Nama Calon Pekerja" />
+                                                                <label>Nama Sektor Usaha</label>
+                                                                <input type="text" class="form-control border-input" name="nama" placeholder="Nama Sektor Usaha" />
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
@@ -149,93 +155,46 @@
                                             <?php
                                             }
                                         ?>
-                                                <h4 class="title">Data Lamaran</h4>
-                                                <p class="category">List dari semua lamaran yang terpublish</p>
+                                                <h4 class="title">Data Sektor Usaha</h4>
+                                                <p class="category">List dari data sektor usaha</p>
                                     </div>
                                     <div class="content table-responsive table-full-width">
                                         <table class="table table-striped">
                                             <thead>
                                                 <th>ID</th>
-                                                <th>Judul Lowongan</th>
-                                                <th>Nama Calon Pekerja</th>
-                                                <th>Status</th>
+                                                <th>Nama</th>
                                                 <th>Actions</th>
                                             </thead>
                                             <tbody>
                                                 <?php
                                                     if(isset($_GET['nama'])){
-                                                        $strQuery = "SELECT la.lamaran_id, lo.lowongan_id, lo.lowongan_judul, cp.calon_pekerja_id, 
-                                                        cp.calon_pekerja_nama_lengkap, la.lamaran_status_lolos
-                                                        FROM lamaran la INNER JOIN lowongan lo ON la.lowongan_id = lo.lowongan_id
-                                                        INNER JOIN calon_pekerja cp ON la.calon_pekerja_id = cp.calon_pekerja_id
-                                                        WHERE cp.calon_pekerja_nama_lengkap LIKE '%$_GET[nama]%' OR lo.lowongan_judul LIKE '%$_GET[nama]%' ORDER BY lamaran_id DESC";
-                                                    }else if(isset($_GET['datausaha'])){
-                                                        $strQuery = "SELECT la.lamaran_id, lo.lowongan_id, lo.lowongan_judul, cp.calon_pekerja_id, 
-                                                        cp.calon_pekerja_nama_lengkap, la.lamaran_status_lolos
-                                                        FROM lamaran la INNER JOIN lowongan lo ON la.lowongan_id = lo.lowongan_id
-                                                        INNER JOIN calon_pekerja cp ON la.calon_pekerja_id = cp.calon_pekerja_id
-                                                        WHERE cp.calon_pekerja_id = p$_GET[calonpekerja]emilikusaha ORDER BY lamaran_id DESC";
+                                                        $strQuery = "SELECT id_sektor, namasektor FROM sektor_usaha WHERE namasektor LIKE '%$_GET[nama]%' ORDER BY id_sektor DESC";
                                                     }else {
-                                                        $strQuery = "SELECT la.lamaran_id, lo.lowongan_id, lo.lowongan_judul, cp.calon_pekerja_id, 
-                                                        cp.calon_pekerja_nama_lengkap, la.lamaran_status_lolos
-                                                        FROM lamaran la INNER JOIN lowongan lo ON la.lowongan_id = lo.lowongan_id
-                                                        INNER JOIN calon_pekerja cp ON la.calon_pekerja_id = cp.calon_pekerja_id
-                                                        ORDER BY lamaran_id DESC";
+                                                        $strQuery = "SELECT id_sektor, namasektor FROM sektor_usaha ORDER BY id_sektor DESC";
                                                     }
                                                     $query = mysqli_query($connection, $strQuery);
                                                     $i = 0;
                                                     while($result = mysqli_fetch_assoc($query)){
                                                         echo "<tr>";
-                                                        echo "<td>$result[lamaran_id]</td>";
-                                                        echo "<td>$result[lowongan_judul]</td>";
-                                                        echo "<td>$result[calon_pekerja_nama_lengkap]</td>";
-                                                        echo "<td>$result[lamaran_status_lolos]</td>";
-                                                        echo "<td><a href=# data-toggle=modal data-target=#edit$i>Edit</a>";
+                                                        echo "<td>$result[id_sektor]</td>";
+                                                        echo "<td>$result[namasektor]</td>";
+                                                        echo "<td><a href='sektorusaha_edit.php?id=$result[id_sektor]'>Edit</a>";
                                                         echo "&nbsp;&nbsp;&nbsp;";
                                                         echo "<a href=# data-toggle=modal data-target=#delete$i>Delete</a></td>";
                                                         echo "</tr>";
                                                 ?>
 
-                                                    <!--Modal Edit -->
-                                                    <div class="modal fade " id="edit<?php echo $i;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                                        <div class="modal-dialog" role="document">
-                                                            <form method="POST" action="php/lamaran_edit_proses.php">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                        <h4 class="modal-title" id="myModalLabel">Status Lamaran</h4>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <div class="form-group">
-                                                                            <label>Status Lamaran</label>
-                                                                            <select class="form-control border-input" name="status">
-                                                                                <option value="Menunggu" <?php if($result['lamaran_status_lolos'] == 'Menunggu') echo "selected"?>>Menunggu</option>
-                                                                                <option value="Lolos" <?php if($result['lamaran_status_lolos'] == 'Lolos') echo "selected"?>>Lolos</option>
-                                                                                <option value="Tidak Lolos" <?php if($result['lamaran_status_lolos'] == 'Tidak Lolos') echo "selected"?>>Tidak Lolos</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <input type="hidden" name="id" value="<?php echo " $result[lamaran_id] ";?>" />
-                                                                        <input type="submit" value="Submit" class="btn btn-info btn-fill"/>
-                                                                        <button type="button" class="btn btn-default btn-fill" data-dismiss="modal">Cancel</button>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Modal -->
                                                     <!-- Modal Delete -->
                                                     <div class="modal fade " id="delete<?php echo $i;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                         <div class="modal-dialog modal-sm" role="document">
-                                                            <form method="POST" action="php/lamaran_delete_proses.php">
+                                                            <form method="POST" action="php/sektorusaha_delete_proses.php">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                                         <h4 class="modal-title" id="myModalLabel">Apakah Anda Yakin ?</h4>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <input type="hidden" name="id" value="<?php echo " $result[lamaran_id] ";?>" />
+                                                                        <input type="hidden" name="id" value="<?php echo " $result[id_sektor] ";?>" />
                                                                         <input type="submit" value="Yes" class="btn btn-info btn-fill"/>
                                                                         <button type="button" class="btn btn-default btn-fill" data-dismiss="modal">No</button>
                                                                     </div>
