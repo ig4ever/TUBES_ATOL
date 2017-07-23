@@ -12,10 +12,10 @@
      }
  
     // Menghubungkan Koneksi dengan server MySQL, ganti bagian $username, $password, dan $database.
-    	$server="127.0.0.1";
-		$username="root";
-		$password="";
-		$database="new_atol";
+    	$server="us-cdbr-azure-west-b.cleardb.com";
+		$username="b619a5cf6e68dd";
+		$password="e0153e39";
+		$database="loker";
 	// isi nama host, username mysql, dan password mysql anda
 		$link = mysqli_connect($server,$username,$password,$database);
  

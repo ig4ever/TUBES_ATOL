@@ -1,5 +1,5 @@
 <?php
-    /*//server
+    //server
     $host = "us-cdbr-azure-west-b.cleardb.com";
     $user = "b619a5cf6e68dd";
     $pass = "e0153e39";
@@ -8,9 +8,9 @@
     $connection = mysqli_connect($host, $user, $pass, $database);
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }*/
+    }
 
-    //lokal server
+    /*//lokal server
     $host = "localhost";
     $user = "root";
     $pass = "";
@@ -19,5 +19,5 @@
     $connection = mysqli_connect($host, $user, $pass, $database);
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
+    }*/
 ?>

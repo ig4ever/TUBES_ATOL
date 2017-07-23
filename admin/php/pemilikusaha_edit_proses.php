@@ -22,8 +22,8 @@
 	mysqli_autocommit($connection, FALSE);
 	if($_FILES['photo_ktp']['size'] == 0) {
         if ($status == "Aktif") {
-            define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
-            //define('ROOT', 'http://tralala.azurewebsites.net/pemilikusaha/');
+            //define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
+            define('ROOT', 'http://tralala.azurewebsites.net/pemilikusaha/');
 
             //$id = date('is');
             $kode = md5(uniqid(rand()));

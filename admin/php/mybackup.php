@@ -2,10 +2,10 @@
 
 	//require "../../php/connection.php";
 
-	$mysql_host = "localhost";
-	$mysql_user = "root";
-	$mysql_pass = "";
-	$mysql_database = "new_atol";
+	$mysql_host = "us-cdbr-azure-west-b.cleardb.com";
+	$mysql_user = "b619a5cf6e68dd";
+	$mysql_pass = "e0153e39";
+	$mysql_database = "loker";
 	$backup_folder = "../backup";
 	$name = 'new_atol'.date("YmdHis").'.sql';
 
