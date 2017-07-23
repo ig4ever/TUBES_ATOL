@@ -2,7 +2,7 @@
     require "../../php/connection.php";
 
     //$img = $_FILES['img'];
-    $id = $_POST['id_usaha'];
+    $id = $_POST['id'];
     $nama = $_POST['nama'];
     $usaha = $_POST['usaha'];
     $utama = $_POST['utama'];
@@ -36,18 +36,53 @@
     if ($_FILES['img']) {
         $file_ary = reArrayFiles($_FILES['img']);
 
-        /*foreach ($file_ary as $file) {
+        foreach ($file_ary as $file) {
             print 'File Name: ' . $file['name'];
             print 'File Type: ' . $file['type'];
             print 'File Size: ' . $file['size'];
-            //$arrayTemp = $file['name'];
-        }*/
+//            $arrayTemp = $file['name'];
+        }
+    }
 
-        print $file_ary[1][0];
-
-        $login_id = mysqli_insert_id($connection);
-        $strQuery = "INSERT INTO data_usaha VALUES(
-                            '$login_id',
+        if ($_FILES['img']['size'] != 0) {
+            $target_dir = "../../upload/cv/";
+            $cv = str_replace(" ", "", $nama);
+            $temp = explode(".", $_FILES["img"]["name"]);
+            $cv = strtolower($cv . date('YmdHis') . "." . end($temp));
+            $target_file = $target_dir . basename($cv);
+            if (move_uploaded_file($_FILES['img']['tmp_name'], $target_file)) {
+                $strQuery = "INSERT INTO data_usaha VALUES(
+                            null,
+                            '$id', 
+                            '$nama', 
+                            '$usaha', 
+                            '$utama',  
+                            '$alamat',
+                            '$kecamatan',
+                            '$kelurahan', 
+                            '$telepon', 
+                            '$latitude', 
+                            '$longitude',  
+                            '$skala',
+                            '$sektor',
+                            '$cv',
+                            '$cv', 
+                            '$cv', 
+                            '$cv',  
+                            '$cv'
+                        )";
+                $query = mysqli_query($connection, $strQuery);
+                if ($query) {
+                    mysqli_commit($connection);
+                    echo "<script language=javascript>alert('Berhasil Menambah Data Usaha');</script>";
+                } else {
+                    mysqli_rollback($connection);
+                    echo "<script language=javascript>alert('Terjadi Kesalahan Saat Menambah Data Usaha');</script>";
+                }
+            }
+        }else{
+            $strQuery = "INSERT INTO data_usaha VALUES(
+                            null,
                             '$id', 
                             '$nama', 
                             '$usaha', 
@@ -66,18 +101,18 @@
                             '',  
                             ''
                         )";
-        $query = mysqli_query($connection, $strQuery);
-        if ($query) {
-            mysqli_commit($connection);
-            echo "<script language=javascript>alert('Berhasil Menambah Data Usaha');</script>";
-        } else {
-            mysqli_rollback($connection);
-            //echo "<script language=javascript>alert('Terjadi Kesalahan Saat Menambah Data Usaha');</script>";
+            $query = mysqli_query($connection, $strQuery);
+            if ($query) {
+                mysqli_commit($connection);
+                echo "<script language=javascript>alert('Berhasil Menambah Data Usaha');</script>";
+            } else {
+                mysqli_rollback($connection);
+                echo "<script language=javascript>alert('Terjadi Kesalahan Saat Menambah Data Usaha');</script>";
+            }
         }
-    }
 
 
 	mysqli_autocommit($connection, TRUE);
-//	echo "<script language=javascript>document.location.href='../datausaha_tambah.php'</script>";
+	echo "<script language=javascript>document.location.href='../datausaha_tambah.php'</script>";
 	mysqli_close($connection);
 ?>

@@ -6,7 +6,7 @@
 	}
 
     if(isset($_SESSION['login_role'])){
-        if($_SESSION['login_role'] != 'Perusahaan')
+        if($_SESSION['login_role'] != 'Pemilik Usaha')
 		    echo "<script language=javascript>document.location.href='login.php'</script>";
 	}
 
@@ -19,7 +19,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Lowker</title>
+        <title>Pemilik Usaha</title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <meta name="viewport" content="width=device-width" />
         <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -40,17 +40,17 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#" style="font-weight: 800;">LOWKER</a>
+                            <a class="navbar-brand" href="#" style="font-weight: 800;">ATOL</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-left" style="margin-left: 56px;">
                                 <li>
-                                    <a href="kelurahan.php">
+                                    <a href="dashboard.php">
                                         Lowongan
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="lowongan_tambah.php">
+                                    <a href="datausaha_tambah.php">
                                         Tambah Lowongan
                                     </a>
                                 </li>
@@ -59,7 +59,7 @@
                                     <!-- Modal Search -->
                                     <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                         <div class="modal-dialog" role="document">
-                                            <form method="GET" action="kelurahan.php">
+                                            <form method="GET" action="dashboard.php">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -149,7 +149,7 @@
                                                     <!-- Modal Delete -->
                                                     <div class="modal fade " id="delete<?php echo $i;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                         <div class="modal-dialog modal-sm" role="document">
-                                                            <form method="POST" action="php/kelurahan_delete_proses.php">
+                                                            <form method="POST" action="php/datausaha_delete_proses.php">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -572,7 +572,7 @@
                             &copy;
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Lowker Team</a>
+                            </script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Team</a>
                         </div>
                     </div>
                 </footer>

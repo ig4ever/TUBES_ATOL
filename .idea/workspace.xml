@@ -2,41 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9a51a8-2b10-462b-9b8a-097df2fc1e1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/php/skalausaha_delete_proses.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/php/skalausaha_edit_proses.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/php/skalausaha_tambah_proses.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/skalausaha.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/skalausaha_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/skalausaha_tambah.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/kota_edit.php" afterPath="$PROJECT_DIR$/admin/sektorusaha_edit.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/php/kota_edit_proses.php" afterPath="$PROJECT_DIR$/admin/php/sektorusaha_edit_proses.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/php/lamaran_delete_proses.php" afterPath="$PROJECT_DIR$/admin/php/sektorusaha_delete_proses.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/php/lamaran_tambah_proses.php" afterPath="$PROJECT_DIR$/admin/php/sektorusaha_tambah_proses.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/php/data_usaha_req2.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pemilikusaha/kelurahan.php" afterPath="$PROJECT_DIR$/pemilikusaha/dashboard.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pemilikusaha/lowongan_edit.php" afterPath="$PROJECT_DIR$/pemilikusaha/datausaha_edit.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pemilikusaha/lowongan_tambah.php" afterPath="$PROJECT_DIR$/pemilikusaha/datausaha_tambah.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pemilikusaha/php/kelurahan_delete_proses.php" afterPath="$PROJECT_DIR$/pemilikusaha/php/datausaha_delete_proses.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pemilikusaha/php/kelurahan_edit_proses.php" afterPath="$PROJECT_DIR$/pemilikusaha/php/datausaha_edit_proses.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_tambah_proses.php" afterPath="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_tambah_datausaha.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/dashboard.php" afterPath="$PROJECT_DIR$/admin/dashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/datausaha.php" afterPath="$PROJECT_DIR$/admin/datausaha.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/datausaha_edit.php" afterPath="$PROJECT_DIR$/admin/datausaha_edit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/datausaha_tambah.php" afterPath="$PROJECT_DIR$/admin/datausaha_tambah.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/kecamatan.php" afterPath="$PROJECT_DIR$/admin/kecamatan.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/kecamatan_edit.php" afterPath="$PROJECT_DIR$/admin/kecamatan_edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/kecamatan_tambah.php" afterPath="$PROJECT_DIR$/admin/kecamatan_tambah.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/kelurahan.php" afterPath="$PROJECT_DIR$/admin/kelurahan.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/kelurahan_edit.php" afterPath="$PROJECT_DIR$/admin/kelurahan_edit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/kelurahan_tambah.php" afterPath="$PROJECT_DIR$/admin/kelurahan_tambah.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pemilikusaha.php" afterPath="$PROJECT_DIR$/admin/pemilikusaha.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pemilikusaha_edit.php" afterPath="$PROJECT_DIR$/admin/pemilikusaha_edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pemilikusaha_restore.php" afterPath="$PROJECT_DIR$/admin/pemilikusaha_restore.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pemilikusaha_tambah.php" afterPath="$PROJECT_DIR$/admin/pemilikusaha_tambah.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/kecamatan_delete_proses.php" afterPath="$PROJECT_DIR$/admin/php/kecamatan_delete_proses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/kecamatan_edit_proses.php" afterPath="$PROJECT_DIR$/admin/php/kecamatan_edit_proses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/kecamatan_tambah_proses.php" afterPath="$PROJECT_DIR$/admin/php/kecamatan_tambah_proses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/datausaha_edit_proses.php" afterPath="$PROJECT_DIR$/admin/php/datausaha_edit_proses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/datausaha_tambah_proses.php" afterPath="$PROJECT_DIR$/admin/php/datausaha_tambah_proses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/kelurahan_delete_proses.php" afterPath="$PROJECT_DIR$/admin/php/kelurahan_delete_proses.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/kelurahan_edit_proses.php" afterPath="$PROJECT_DIR$/admin/php/kelurahan_edit_proses.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/kelurahan_tambah_proses.php" afterPath="$PROJECT_DIR$/admin/php/kelurahan_tambah_proses.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/pemilikusaha_edit_proses.php" afterPath="$PROJECT_DIR$/admin/php/pemilikusaha_edit_proses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/pemilikusaha_tambah_proses.php" afterPath="$PROJECT_DIR$/admin/php/pemilikusaha_tambah_proses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/sektorusaha.php" afterPath="$PROJECT_DIR$/admin/sektorusaha.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/profil_edit_proses.php" afterPath="$PROJECT_DIR$/admin/php/profil_edit_proses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/php/sektorusaha_edit_proses.php" afterPath="$PROJECT_DIR$/admin/php/sektorusaha_edit_proses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/profil_edit.php" afterPath="$PROJECT_DIR$/admin/profil_edit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/sektorusaha_edit.php" afterPath="$PROJECT_DIR$/admin/sektorusaha_edit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/sektorusaha_tambah.php" afterPath="$PROJECT_DIR$/admin/sektorusaha_tambah.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_atol.sql" afterPath="$PROJECT_DIR$/new_atol.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/skalausaha.php" afterPath="$PROJECT_DIR$/admin/skalausaha.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/skalausaha_edit.php" afterPath="$PROJECT_DIR$/admin/skalausaha_edit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/kelurahan_detail.php" afterPath="$PROJECT_DIR$/pemilikusaha/kelurahan_detail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/login.php" afterPath="$PROJECT_DIR$/pemilikusaha/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/loginActivated.php" afterPath="$PROJECT_DIR$/pemilikusaha/loginActivated.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/lowongan_tambah_jobdesc.php" afterPath="$PROJECT_DIR$/pemilikusaha/lowongan_tambah_jobdesc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/lowongan_tambah_syarat.php" afterPath="$PROJECT_DIR$/pemilikusaha/lowongan_tambah_syarat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/php/login.php" afterPath="$PROJECT_DIR$/pemilikusaha/php/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_edit_proses.php" afterPath="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_edit_proses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/profil_edit.php" afterPath="$PROJECT_DIR$/pemilikusaha/profil_edit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pemilikusaha/signup.php" afterPath="$PROJECT_DIR$/pemilikusaha/signup.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,121 +63,132 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="skalausaha_edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/skalausaha_edit.php">
+      <file leaf-file-name="datausaha_edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pemilikusaha/datausaha_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="135" column="64" lean-forward="false" selection-start-line="135" selection-start-column="64" selection-end-line="135" selection-end-column="64" />
+            <state relative-caret-position="317">
+              <caret line="329" column="100" lean-forward="false" selection-start-line="329" selection-start-column="95" selection-end-line="329" selection-end-column="100" />
               <folding>
-                <marker date="1500723166947" expanded="true" signature="431:497" ph="SELECT id_sk... skala_usaha" />
+                <element signature="n#style#0;n#div#0;n#center#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1500820888980" expanded="true" signature="783:1850" ph="SELECT p.id_... data_usaha" />
+                <marker date="1500820888980" expanded="true" signature="17182:17217" ph="SELECT idkec... kecamatan" />
+                <marker date="1500820888980" expanded="true" signature="19591:19634" ph="SELECT id_sk... skala_usaha" />
+                <marker date="1500820888980" expanded="true" signature="20941:20987" ph="SELECT id_se... sektor_usaha" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="skalausaha_tambah_proses.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/php/skalausaha_tambah_proses.php">
+      <file leaf-file-name="datausaha_tambah.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pemilikusaha/datausaha_tambah.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="70" lean-forward="false" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+            <state relative-caret-position="1082">
+              <caret line="251" column="86" lean-forward="false" selection-start-line="251" selection-start-column="86" selection-end-line="251" selection-end-column="86" />
               <folding>
-                <marker date="1500725849579" expanded="true" signature="116:160" ph="INSERT INTO skala_usaha... " />
+                <marker date="1500820240353" expanded="true" signature="14174:14209" ph="SELECT idkec... kecamatan" />
+                <marker date="1500820240353" expanded="true" signature="16880:16923" ph="SELECT id_sk... skala_usaha" />
+                <marker date="1500820240353" expanded="true" signature="18230:18276" ph="SELECT id_se... sektor_usaha" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sektorusaha.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/sektorusaha.php">
+      <file leaf-file-name="kelurahan_detail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pemilikusaha/kelurahan_detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+            <state relative-caret-position="510">
+              <caret line="416" column="71" lean-forward="false" selection-start-line="416" selection-start-column="71" selection-end-line="416" selection-end-column="71" />
               <folding>
-                <marker date="1500719895680" expanded="true" signature="9523:9530" ph="SELECT id_se... sektor_usaha" />
-                <marker date="1500719895680" expanded="true" signature="9523:9631" ph="SELECT idkel... kelurahan" />
-                <marker date="1500719895680" expanded="true" signature="9763:9833" ph="SELECT idkel... kelurahan" />
+                <marker date="1500811094298" expanded="true" signature="7390:8024" ph="SELECT l.low... lowongan" />
+                <marker date="1500811094298" expanded="true" signature="12610:13244" ph="SELECT l.low... lowongan" />
+                <marker date="1500811094298" expanded="true" signature="15260:15362" ph="SELECT lowon... lowongan_syarat" />
+                <marker date="1500811094298" expanded="true" signature="23031:23140" ph="SELECT lowon... lowongan_jobdesc" />
+                <marker date="1500811094298" expanded="true" signature="30765:32327" ph="SELECT la.la... lamaran" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="skalausaha.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/skalausaha.php">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pemilikusaha/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="189" column="85" lean-forward="false" selection-start-line="189" selection-start-column="85" selection-end-line="189" selection-end-column="85" />
+            <state relative-caret-position="3825">
+              <caret line="237" column="92" lean-forward="false" selection-start-line="237" selection-start-column="92" selection-end-line="237" selection-end-column="92" />
               <folding>
-                <marker date="1500725933006" expanded="true" signature="8284:8387" ph="SELECT id_se... sektor_usaha" />
-                <marker date="1500725933006" expanded="true" signature="8487:8553" ph="SELECT id_se... sektor_usaha" />
+                <element signature="e#11362#11369#1#HTML" expanded="true" />
+                <marker date="1500822163992" expanded="true" signature="5976:7042" ph="SELECT l.low... lowongan" />
+                <marker date="1500822163992" expanded="true" signature="7138:8129" ph="SELECT l.log... login" />
+                <marker date="1500822163992" expanded="true" signature="7138:8203" ph="SELECT l.low... lowongan" />
+                <marker date="1500822163992" expanded="true" signature="10432:10438" ph=" " />
+                <marker date="1500822163992" expanded="true" signature="10438:10444" ph=" " />
+                <marker date="1500822163992" expanded="true" signature="10444:10450" ph=" " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="skalausaha_edit_proses.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/php/skalausaha_edit_proses.php">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pemilikusaha/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
-              <folding>
-                <marker date="1500723338938" expanded="true" signature="116:176" ph="UPDATE skala... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sektorusaha_tambah_proses.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/php/sektorusaha_tambah_proses.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="59" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="2" />
-              <folding>
-                <marker date="1500720418470" expanded="true" signature="113:157" ph="INSERT INTO sektor_usaha... " />
-                <marker date="1500720418470" expanded="true" signature="113:158" ph="INSERT INTO sektor_usaha... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="skalausaha_delete_proses.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/php/skalausaha_delete_proses.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
-              <folding>
-                <marker date="1500725859251" expanded="true" signature="88:129" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="skalausaha_tambah.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/skalausaha_tambah.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="94" column="22" lean-forward="true" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
+            <state relative-caret-position="884">
+              <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sektorusaha_tambah.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/sektorusaha_tambah.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1547">
-              <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+            <state relative-caret-position="561">
+              <caret line="87" column="44" lean-forward="true" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datalokasimapsbdg1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datalokasimapsbdg1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+              <folding>
+                <marker date="1500823844798" expanded="true" signature="806:830" ph="SELECT * FRO... data_usaha" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sektorusaha_edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/sektorusaha_edit.php">
+      <file leaf-file-name="connection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="68">
+              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datausaha_edit_proses.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/php/datausaha_edit_proses.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
               <folding>
-                <marker date="1500723119142" expanded="true" signature="466:536" ph="SELECT kota_... kota" />
+                <marker date="1500821051872" expanded="true" signature="1044:1937" ph="UPDATE data_... " />
+                <marker date="1500821051872" expanded="true" signature="2414:3292" ph="UPDATE data_... " />
               </folding>
             </state>
           </provider>
@@ -184,24 +198,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user</find>
-      <find>pemilik</find>
-      <find>data pe</find>
-      <find>file_cv</find>
-      <find>username</find>
-      <find>cv</find>
-      <find>onfo</find>
-      <find>alama</find>
-      <find>submit</find>
       <find>subm</find>
       <find>deta</find>
       <find>kecamatan</find>
       <find>file</find>
       <find>status</find>
       <find>delete</find>
-      <find>lowker</find>
       <find>keteran</find>
-      <find>kota</find>
       <find>login_id</find>
       <find>$login_id</find>
       <find>id</find>
@@ -212,8 +215,19 @@
       <find>kategori</find>
       <find>lowongan</find>
       <find>kecama</find>
-      <find>sektor</find>
       <find>lamaran</find>
+      <find>kecamta</find>
+      <find>kota</find>
+      <find>sektor</find>
+      <find>perusah</find>
+      <find>perusahaan</find>
+      <find>lowker</find>
+      <find>calon peker</find>
+      <find>$id</find>
+      <find>backup</find>
+      <find>datalokasima</find>
+      <find>usaha</find>
+      <find>profil</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,57 +236,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin/lamaran.php" />
-        <option value="$PROJECT_DIR$/admin/lowongan.php" />
-        <option value="$PROJECT_DIR$/admin/perusahaan.php" />
-        <option value="$PROJECT_DIR$/admin/pemilik_usaha.php" />
-        <option value="$PROJECT_DIR$/admin/calonpekerja.php" />
-        <option value="$PROJECT_DIR$/datausaha/signup.php" />
-        <option value="$PROJECT_DIR$/datausaha/login.php" />
-        <option value="$PROJECT_DIR$/pemilikusaha/login.php" />
-        <option value="$PROJECT_DIR$/admin/php/pemilikusaha_delete_proses.php" />
-        <option value="$PROJECT_DIR$/pemilikusaha/loginActivated.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_tambah_proses.php" />
-        <option value="$PROJECT_DIR$/pemilikusaha/signup.php" />
-        <option value="$PROJECT_DIR$/admin/php/datausaha_edit_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/datausaha_delete_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/data_usaha_req.php" />
-        <option value="$PROJECT_DIR$/admin/php/datausaha_tambah_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/kecamatan_edit_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/kecamatan_tambah_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/pemilikusaha_tambah_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/kecamatan_delete_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/kelurahan_edit_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/pemilikusaha_edit_proses.php" />
-        <option value="$PROJECT_DIR$/admin/php/kelurahan_tambah_proses.php" />
-        <option value="$PROJECT_DIR$/admin/dashboard.php" />
-        <option value="$PROJECT_DIR$/admin/datausaha.php" />
-        <option value="$PROJECT_DIR$/admin/datausaha_edit.php" />
-        <option value="$PROJECT_DIR$/admin/datausaha_tambah.php" />
-        <option value="$PROJECT_DIR$/admin/kecamatan.php" />
-        <option value="$PROJECT_DIR$/admin/kecamatan_edit.php" />
         <option value="$PROJECT_DIR$/admin/kecamatan_tambah.php" />
         <option value="$PROJECT_DIR$/admin/kelurahan.php" />
-        <option value="$PROJECT_DIR$/admin/kelurahan_edit.php" />
-        <option value="$PROJECT_DIR$/admin/kelurahan_tambah.php" />
         <option value="$PROJECT_DIR$/admin/pemilikusaha.php" />
         <option value="$PROJECT_DIR$/admin/pemilikusaha_edit.php" />
         <option value="$PROJECT_DIR$/admin/pemilikusaha_restore.php" />
-        <option value="$PROJECT_DIR$/admin/pemilikusaha_tambah.php" />
         <option value="$PROJECT_DIR$/admin/sektorusaha.php" />
-        <option value="$PROJECT_DIR$/admin/sektorusaha_tambah.php" />
-        <option value="$PROJECT_DIR$/admin/php/sektorusaha_edit_proses.php" />
         <option value="$PROJECT_DIR$/admin/php/sektorusaha_tambah_proses.php" />
         <option value="$PROJECT_DIR$/new_atol.sql" />
         <option value="$PROJECT_DIR$/admin/php/sektorusaha_delete_proses.php" />
-        <option value="$PROJECT_DIR$/admin/sektorusaha_edit.php" />
-        <option value="$PROJECT_DIR$/admin/skalausaha_edit.php" />
         <option value="$PROJECT_DIR$/admin/php/skalausaha_edit_proses.php" />
         <option value="$PROJECT_DIR$/admin/skalausaha_tambah.php" />
         <option value="$PROJECT_DIR$/admin/php/skalausaha_tambah_proses.php" />
         <option value="$PROJECT_DIR$/admin/php/skalausaha_delete_proses.php" />
+        <option value="$PROJECT_DIR$/admin/sektorusaha_tambah.php" />
+        <option value="$PROJECT_DIR$/admin/kecamatan_edit.php" />
+        <option value="$PROJECT_DIR$/admin/kelurahan_edit.php" />
+        <option value="$PROJECT_DIR$/admin/kelurahan_tambah.php" />
+        <option value="$PROJECT_DIR$/admin/php/sektorusaha_edit_proses.php" />
+        <option value="$PROJECT_DIR$/admin/skalausaha_edit.php" />
+        <option value="$PROJECT_DIR$/admin/sektorusaha_edit.php" />
         <option value="$PROJECT_DIR$/admin/skalausaha.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_tambah_proses.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/lowongan_edit.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/lowongan_tambah.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/lowongan_tambah_jobdesc.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/lowongan_tambah_syarat.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/kelurahan_detail.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/loginActivated.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/login.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/signup.php" />
+        <option value="$PROJECT_DIR$/admin/pemilikusaha_tambah.php" />
+        <option value="$PROJECT_DIR$/admin/php/pemilikusaha_edit_proses.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/php/login.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/profil_edit.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_edit_proses.php" />
+        <option value="$PROJECT_DIR$/admin/php/datausaha_tambah_proses.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_tambah_datausaha.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/php/datausaha_delete_proses.php" />
+        <option value="$PROJECT_DIR$/admin/profil_edit.php" />
+        <option value="$PROJECT_DIR$/admin/php/profil_edit_proses.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/datausaha_tambah.php" />
+        <option value="$PROJECT_DIR$/admin/datausaha_tambah.php" />
+        <option value="$PROJECT_DIR$/admin/datausaha_edit.php" />
+        <option value="$PROJECT_DIR$/admin/php/data_usaha_req2.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/datausaha_edit.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/php/data_usaha_req2.php" />
+        <option value="$PROJECT_DIR$/admin/php/datausaha_edit_proses.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/php/datausaha_edit_proses.php" />
+        <option value="$PROJECT_DIR$/pemilikusaha/dashboard.php" />
+        <option value="$PROJECT_DIR$/datalokasimapsbdg1.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -378,6 +392,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -528,9 +543,26 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUBES_ATOL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUBES_ATOL" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backup" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -645,11 +677,12 @@
       <workItem from="1500520586004" duration="17374000" />
       <workItem from="1500611422408" duration="17753000" />
       <workItem from="1500703477126" duration="18018000" />
+      <workItem from="1500787557222" duration="35613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174709000" />
+    <option name="totallyTimeSpent" value="210322000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,12 +702,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -694,533 +727,542 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/datausaha/php/lamaran_delete_proses.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/myrestore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datausaha/lamaran.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/mybackup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/profil_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="90" column="57" lean-forward="true" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
           <folding>
-            <marker date="1500304673674" expanded="true" signature="7673:8775" ph="SELECT la.la... lamaran" />
-            <marker date="1500304673674" expanded="true" signature="8907:9974" ph="SELECT la.la... lamaran" />
-            <marker date="1500304673674" expanded="true" signature="13756:13974" ph="SELECT j.low... lowongan_jobdesc" />
-            <marker date="1500304673674" expanded="true" signature="15019:15221" ph="SELECT s.low... lowongan_syarat" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datausaha/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="71" lean-forward="true" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/datausaha_delete_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <marker date="1500526360830" expanded="true" signature="114:154" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <marker date="1500341575492" expanded="true" signature="4617:4652" ph="SELECT kota_... kota" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lowongan_tambah_syarat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500297554694" expanded="true" signature="1543:1560" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_tambah_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
-          <folding>
-            <marker date="1500370132093" expanded="true" signature="747:822" ph="INSERT INTO login... " />
-            <marker date="1500370132093" expanded="true" signature="2723:2923" ph="INSERT INTO perusahaan... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pemilikusaha/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="140" column="75" lean-forward="true" selection-start-line="140" selection-start-column="75" selection-end-line="140" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/datausaha_edit_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <marker date="1500526181671" expanded="true" signature="830:1525" ph="UPDATE pemil... " />
-            <marker date="1500526181671" expanded="true" signature="830:1527" ph="UPDATE data_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/data_usaha_req.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1500621802541" expanded="true" signature="88:260" ph="SELECT l.log... login" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/profil_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2720">
-          <caret line="160" column="54" lean-forward="false" selection-start-line="160" selection-start-column="54" selection-end-line="160" selection-end-column="54" />
-          <folding>
-            <marker date="1500297553040" expanded="true" signature="491:694" ph="SELECT a.adm... admin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/kelurahan_edit_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-          <folding>
-            <marker date="1500713927772" expanded="true" signature="113:166" ph="UPDATE kelur... " />
-            <marker date="1500713927772" expanded="true" signature="163:166" ph="UPDATE lowon... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/kecamatan_edit_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="62" lean-forward="true" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-          <folding>
-            <marker date="1500707502896" expanded="true" signature="107:160" ph="UPDATE kecam... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/kecamatan_delete_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="58" lean-forward="true" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-          <folding>
-            <marker date="1500713290141" expanded="true" signature="82:118" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/kecamatan_tambah_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="90" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="90" />
-          <folding>
-            <marker date="1500709031946" expanded="true" signature="83:126" ph="INSERT INTO kecamatan... " />
+            <marker date="1500802837014" expanded="true" signature="749:1266" ph="SELECT cp.pe... pemilik_usaha" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/php/pemilikusaha_edit_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="72" column="43" lean-forward="false" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state relative-caret-position="-663">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
-            <marker date="1500718331031" expanded="true" signature="2091:2449" ph="UPDATE pemil... " />
-            <marker date="1500718331031" expanded="true" signature="2665:2747" ph="UPDATE login... " />
-            <marker date="1500718331031" expanded="true" signature="2817:2872" ph="UPDATE login... " />
-            <marker date="1500718331031" expanded="true" signature="3450:3808" ph="UPDATE pemil... " />
-            <marker date="1500718331031" expanded="true" signature="4024:4106" ph="UPDATE login... " />
-            <marker date="1500718331031" expanded="true" signature="4176:4231" ph="UPDATE login... " />
-            <marker date="1500718331031" expanded="true" signature="6425:6823" ph="UPDATE pemil... " />
-            <marker date="1500718331031" expanded="true" signature="6820:6823" ph="UPDATE calon... " />
-            <marker date="1500718331031" expanded="true" signature="7039:7121" ph="UPDATE login... " />
-            <marker date="1500718331031" expanded="true" signature="7191:7246" ph="UPDATE login... " />
-            <marker date="1500718331031" expanded="true" signature="7848:8246" ph="UPDATE pemil... " />
-            <marker date="1500718331031" expanded="true" signature="8482:8564" ph="UPDATE login... " />
-            <marker date="1500718331031" expanded="true" signature="8642:8697" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="2169:2521" ph="UPDATE pemil... " />
+            <marker date="1500798114204" expanded="true" signature="2737:2819" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="2889:2944" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="3522:3880" ph="UPDATE pemil... " />
+            <marker date="1500798114204" expanded="true" signature="4096:4178" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="4248:4303" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="6575:6966" ph="UPDATE pemil... " />
+            <marker date="1500798114204" expanded="true" signature="7182:7264" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="7334:7389" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="7991:8389" ph="UPDATE pemil... " />
+            <marker date="1500798114204" expanded="true" signature="8625:8707" ph="UPDATE login... " />
+            <marker date="1500798114204" expanded="true" signature="8785:8840" ph="UPDATE login... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/datausaha_tambah_proses.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/lowongan_jobdesc_edit_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="47" column="50" lean-forward="true" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500651502347" expanded="true" signature="1379:1961" ph="INSERT INTO data_usaha... " />
-            <marker date="1500651502347" expanded="true" signature="1379:2120" ph="INSERT INTO pemilikusaha... " />
+            <marker date="1500787519968" expanded="true" signature="152:242" ph="UPDATE lowon... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/pemilikusaha_tambah_proses.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/kota_tambah_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="134" lean-forward="true" selection-start-line="33" selection-start-column="134" selection-end-line="33" selection-end-column="134" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500713061380" expanded="true" signature="820:895" ph="INSERT INTO login... " />
-            <marker date="1500713061380" expanded="true" signature="2842:3227" ph="INSERT INTO pemilik_usaha... " />
-            <marker date="1500713061380" expanded="true" signature="4018:4403" ph="INSERT INTO pemilik_usaha... " />
+            <marker date="1500787519899" expanded="true" signature="86:123" ph="INSERT INTO kota... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/lowongan_jobdesc_tambah_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500787519972" expanded="true" signature="259:312" ph="INSERT INTO lowongan_jobdesc... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/lowongan_syarat_delete_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500787520011" expanded="true" signature="121:176" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/lowongan_jobdesc_delete_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500787519962" expanded="true" signature="121:178" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/lowongan_syarat_edit_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500787520015" expanded="true" signature="150:232" ph="UPDATE lowon... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/php/kelurahan_tambah_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500719131665" expanded="true" signature="113:163" ph="INSERT INTO kelurahan... " />
+            <marker date="1500794866217" expanded="true" signature="113:163" ph="INSERT INTO kelurahan... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="80" selection-end-column="29" />
-          <folding>
-            <marker date="1500719313497" expanded="true" signature="6312:6354" ph="SELECT pemil... pemilik_usaha" />
-            <marker date="1500719313497" expanded="true" signature="7769:7800" ph="SELECT id_us... data_usaha" />
-            <marker date="1500719313497" expanded="true" signature="9210:9237" ph="SELECT Idkec... kecamatan" />
-            <marker date="1500719313497" expanded="true" signature="10650:10677" ph="SELECT idkel... kelurahan" />
-            <marker date="1500719313497" expanded="true" signature="12095:12129" ph="SELECT id_Se... sektor_usaha" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/datausaha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="75" column="42" lean-forward="false" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-          <folding>
-            <marker date="1500719324811" expanded="true" signature="9654:10085" ph="SELECT p.id_... data_usaha" />
-            <marker date="1500719324811" expanded="true" signature="9654:10707" ph="SELECT p.per... datausaha" />
-            <marker date="1500719324811" expanded="true" signature="10839:11804" ph="SELECT p.id_... data_usaha" />
-            <marker date="1500719324811" expanded="true" signature="10839:11805" ph="SELECT p.per... datausaha" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/datausaha_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="136" column="29" lean-forward="false" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
-          <folding>
-            <marker date="1500719332290" expanded="true" signature="859:868" ph="SELECT p.id_... data_usaha" />
-            <marker date="1500719332290" expanded="true" signature="859:1761" ph="SELECT p.id_... data_usaha" />
-            <marker date="1500719332290" expanded="true" signature="859:1926" ph="SELECT p.per... perusahaan" />
-            <marker date="1500719332290" expanded="true" signature="2961:2984" ph="..." />
-            <marker date="1500719332290" expanded="true" signature="3610:3630" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/datausaha_tambah.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="100" column="29" lean-forward="false" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-          <folding>
-            <marker date="1500719338829" expanded="true" signature="7413:7421" ph="SELECT kota_... kota" />
-            <marker date="1500719338829" expanded="true" signature="7413:7635" ph="SELECT l.log... login" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/kelurahan_tambah.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-          <folding>
-            <marker date="1500719387450" expanded="true" signature="6576:6612" ph="SELECT idkec... kecamatan" />
-            <marker date="1500719387450" expanded="true" signature="6576:6613" ph="SELECT l.idk... kelurahan" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/kota.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/kelurahan_delete_proses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500297553339" expanded="true" signature="9356:9450" ph="SELECT kota_... kota" />
-            <marker date="1500297553339" expanded="true" signature="9582:9639" ph="SELECT kota_... kota" />
+            <marker date="1500794865875" expanded="true" signature="82:123" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/kota_tambah.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lowongan_detail.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/kelurahan_edit_proses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500304674105" expanded="true" signature="6935:7571" ph="SELECT l.low... lowongan" />
-            <marker date="1500304674105" expanded="true" signature="12157:12793" ph="SELECT l.low... lowongan" />
-            <marker date="1500304674105" expanded="true" signature="14809:14911" ph="SELECT lowon... lowongan_syarat" />
-            <marker date="1500304674105" expanded="true" signature="22580:22689" ph="SELECT lowon... lowongan_jobdesc" />
-            <marker date="1500304674105" expanded="true" signature="30314:31878" ph="SELECT la.la... lamaran" />
+            <marker date="1500794866253" expanded="true" signature="113:166" ph="UPDATE kelur... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lowongan_tambah_jobdesc.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/kecamatan_edit_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="887">
-          <caret line="117" column="39" lean-forward="false" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="39" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500297554167" expanded="true" signature="1543:1560" ph="..." />
+            <marker date="1500787519872" expanded="true" signature="107:160" ph="UPDATE kecam... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pemilikusaha.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/kecamatan_delete_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500719401720" expanded="true" signature="9726:10303" ph="SELECT cp.pe... calon_pekerja" />
-            <marker date="1500719401720" expanded="true" signature="10435:10980" ph="SELECT cp.ca... calon_pekerja" />
+            <marker date="1500787519867" expanded="true" signature="82:118" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pemilikusaha_edit.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/pemilikusaha_tambah_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="118" column="29" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
+        <state relative-caret-position="272">
+          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
-            <marker date="1500719409196" expanded="true" signature="733:1230" ph="SELECT cp.pe... pemilik_usaha" />
+            <marker date="1500787520053" expanded="true" signature="820:895" ph="INSERT INTO login... " />
+            <marker date="1500787520053" expanded="true" signature="2842:3227" ph="INSERT INTO pemilik_usaha... " />
+            <marker date="1500787520053" expanded="true" signature="4018:4403" ph="INSERT INTO pemilik_usaha... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pemilikusaha_tambah.php">
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/lowongan_tambah_syarat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+        <state relative-caret-position="136">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <marker date="1500799072572" expanded="true" signature="1551:1568" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/loginActivated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <marker date="1500799238678" expanded="true" signature="138:206" ph="UPDATE pemil... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/php/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="39" />
+          <folding>
+            <marker date="1500802269556" expanded="true" signature="192:435" ph="SELECT * FRO... login" />
+            <marker date="1500802269556" expanded="true" signature="192:436" ph="SELECT * FRO... pemilik_usaha" />
+            <marker date="1500802269556" expanded="true" signature="1118:1166" ph="SELECT * FRO... pemilik_usaha" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/php/datausaha_delete_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <marker date="1500811100788" expanded="true" signature="82:122" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/covert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/kelurahan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-371">
-          <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-          <folding>
-            <marker date="1500719370393" expanded="true" signature="9420:9511" ph="SELECT idkel... kelurahan" />
-            <marker date="1500719370393" expanded="true" signature="9643:9699" ph="SELECT idkel... kelurahan" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/pemilikusaha_restore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="86" column="29" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+        <state relative-caret-position="-2284">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/kecamatan_edit.php">
+    <entry file="file://$PROJECT_DIR$/admin/profil_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+        <state relative-caret-position="-1037">
+          <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding>
-            <marker date="1500719355900" expanded="true" signature="466:522" ph="SELECT kateg... kategori" />
+            <marker date="1500813043322" expanded="true" signature="491:694" ph="SELECT a.adm... admin" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding>
+            <marker date="1500787519957" expanded="true" signature="172:246" ph="SELECT * FRO... login" />
+            <marker date="1500787519957" expanded="true" signature="748:796" ph="SELECT * FRO... admin" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/profil_edit_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <marker date="1500813381515" expanded="true" signature="334:392" ph="UPDATE admin... " />
+            <marker date="1500813381515" expanded="true" signature="569:651" ph="UPDATE login... " />
+            <marker date="1500813381515" expanded="true" signature="689:744" ph="UPDATE login... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/kelurahan_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+        <state relative-caret-position="1235">
+          <caret line="146" column="61" lean-forward="false" selection-start-line="146" selection-start-column="61" selection-end-line="146" selection-end-column="61" />
           <folding>
-            <marker date="1500719378949" expanded="true" signature="466:522" ph="SELECT idkel... kelurahan" />
+            <marker date="1500788846147" expanded="true" signature="466:522" ph="SELECT idkel... kelurahan" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/kecamatan.php">
+    <entry file="file://$PROJECT_DIR$/admin/pemilikusaha_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="186" column="94" lean-forward="true" selection-start-line="186" selection-start-column="94" selection-end-line="186" selection-end-column="94" />
+        <state relative-caret-position="425">
+          <caret line="221" column="161" lean-forward="true" selection-start-line="220" selection-start-column="60" selection-end-line="221" selection-end-column="161" />
           <folding>
-            <marker date="1500719345557" expanded="true" signature="9421:9512" ph="SELECT kateg... kategori" />
-            <marker date="1500719345557" expanded="true" signature="9644:9700" ph="SELECT kateg... kategori" />
+            <marker date="1500787518024" expanded="true" signature="733:1230" ph="SELECT cp.pe... pemilik_usaha" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/kecamatan_tambah.php">
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/php/kelurahan_tambah_proses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="127" column="53" lean-forward="false" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500787523435" expanded="true" signature="360:477" ph="INSERT INTO lowongan... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/lowongan_tambah_jobdesc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding>
+            <marker date="1500799072515" expanded="true" signature="1551:1568" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lowongan_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500787517883" expanded="true" signature="6935:7571" ph="SELECT l.low... lowongan" />
+            <marker date="1500787517883" expanded="true" signature="12157:12793" ph="SELECT l.low... lowongan" />
+            <marker date="1500787517883" expanded="true" signature="14809:14911" ph="SELECT lowon... lowongan_syarat" />
+            <marker date="1500787517883" expanded="true" signature="22580:22689" ph="SELECT lowon... lowongan_jobdesc" />
+            <marker date="1500787517883" expanded="true" signature="30314:31878" ph="SELECT la.la... lamaran" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pemilikusaha_tambah.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="887">
+          <caret line="326" column="37" lean-forward="true" selection-start-line="326" selection-start-column="37" selection-end-line="326" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new_atol.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="58" column="33" lean-forward="true" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/sektorusaha_delete_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding>
-            <marker date="1500722600458" expanded="true" signature="82:125" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/sektorusaha_edit_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="47" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <marker date="1500720351254" expanded="true" signature="107:170" ph="UPDATE sekto... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/sektorusaha_tambah_proses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="59" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <marker date="1500720418470" expanded="true" signature="113:157" ph="INSERT INTO sektor_usaha... " />
-            <marker date="1500720418470" expanded="true" signature="113:158" ph="INSERT INTO sektor_usaha... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/sektorusaha_tambah.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/sektorusaha_edit.php">
+    <entry file="file://$PROJECT_DIR$/admin/datausaha.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        <state relative-caret-position="2414">
+          <caret line="322" column="58" lean-forward="true" selection-start-line="322" selection-start-column="58" selection-end-line="322" selection-end-column="58" />
           <folding>
-            <marker date="1500723119142" expanded="true" signature="466:536" ph="SELECT kota_... kota" />
+            <marker date="1500794865966" expanded="true" signature="9654:10707" ph="SELECT p.id_... data_usaha" />
+            <marker date="1500794865966" expanded="true" signature="10839:11804" ph="SELECT p.id_... data_usaha" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/sektorusaha.php">
+    <entry file="file://$PROJECT_DIR$/admin/datausaha_tambah.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+        <state relative-caret-position="272">
+          <caret line="337" column="58" lean-forward="true" selection-start-line="337" selection-start-column="58" selection-end-line="337" selection-end-column="58" />
           <folding>
-            <marker date="1500719895680" expanded="true" signature="9523:9530" ph="SELECT id_se... sektor_usaha" />
-            <marker date="1500719895680" expanded="true" signature="9523:9631" ph="SELECT idkel... kelurahan" />
-            <marker date="1500719895680" expanded="true" signature="9763:9833" ph="SELECT idkel... kelurahan" />
+            <element signature="n#style#0;n#div#0;n#center#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1500820377099" expanded="true" signature="11859:12081" ph="SELECT l.log... login" />
+            <marker date="1500820377099" expanded="true" signature="16492:16527" ph="SELECT idkec... kecamatan" />
+            <marker date="1500820377099" expanded="true" signature="20067:20110" ph="SELECT id_sk... skala_usaha" />
+            <marker date="1500820377099" expanded="true" signature="21417:21463" ph="SELECT id_se... sektor_usaha" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/skalausaha_edit.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/datausaha_tambah_proses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="135" column="64" lean-forward="false" selection-start-line="135" selection-start-column="64" selection-end-line="135" selection-end-column="64" />
+          <caret line="60" column="41" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
           <folding>
-            <marker date="1500723166947" expanded="true" signature="431:497" ph="SELECT id_sk... skala_usaha" />
+            <marker date="1500810399773" expanded="true" signature="1701:2450" ph="INSERT INTO data_usaha... " />
+            <marker date="1500810399773" expanded="true" signature="2963:3697" ph="INSERT INTO data_usaha... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/skalausaha_tambah.php">
+    <entry file="file://$PROJECT_DIR$/admin/php/data_usaha_req2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="94" column="22" lean-forward="true" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
+        <state relative-caret-position="136">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <marker date="1500820775288" expanded="true" signature="88:242" ph="SELECT kec.i... kelurahan" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/datausaha_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="353" column="100" lean-forward="false" selection-start-line="353" selection-start-column="95" selection-end-line="353" selection-end-column="100" />
+          <folding>
+            <marker date="1500820765816" expanded="true" signature="859:1926" ph="SELECT p.id_... data_usaha" />
+            <marker date="1500820765816" expanded="true" signature="17826:17861" ph="SELECT idkec... kecamatan" />
+            <marker date="1500820765816" expanded="true" signature="20236:20279" ph="SELECT id_sk... skala_usaha" />
+            <marker date="1500820765816" expanded="true" signature="21586:21632" ph="SELECT id_se... sektor_usaha" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/php/data_usaha_req2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <marker date="1500820895239" expanded="true" signature="88:242" ph="SELECT kec.i... kelurahan" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/php/pemilikusaha_tambah_datausaha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="955">
+          <caret line="117" column="6" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+          <folding>
+            <marker date="1500810903413" expanded="true" signature="1695:2596" ph="INSERT INTO data_usaha... " />
+            <marker date="1500810903413" expanded="true" signature="3067:3953" ph="INSERT INTO data_usaha... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/php/datausaha_edit_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding>
+            <marker date="1500821087968" expanded="true" signature="958:1851" ph="UPDATE data_... " />
+            <marker date="1500821087968" expanded="true" signature="2284:3162" ph="UPDATE data_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/php/datausaha_edit_proses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <folding>
+            <marker date="1500821051872" expanded="true" signature="1044:1937" ph="UPDATE data_... " />
+            <marker date="1500821051872" expanded="true" signature="2414:3292" ph="UPDATE data_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/datausaha_tambah.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1082">
+          <caret line="251" column="86" lean-forward="false" selection-start-line="251" selection-start-column="86" selection-end-line="251" selection-end-column="86" />
+          <folding>
+            <marker date="1500820240353" expanded="true" signature="14174:14209" ph="SELECT idkec... kecamatan" />
+            <marker date="1500820240353" expanded="true" signature="16880:16923" ph="SELECT id_sk... skala_usaha" />
+            <marker date="1500820240353" expanded="true" signature="18230:18276" ph="SELECT id_se... sektor_usaha" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/kelurahan_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="416" column="71" lean-forward="false" selection-start-line="416" selection-start-column="71" selection-end-line="416" selection-end-column="71" />
+          <folding>
+            <marker date="1500811094298" expanded="true" signature="7390:8024" ph="SELECT l.low... lowongan" />
+            <marker date="1500811094298" expanded="true" signature="12610:13244" ph="SELECT l.low... lowongan" />
+            <marker date="1500811094298" expanded="true" signature="15260:15362" ph="SELECT lowon... lowongan_syarat" />
+            <marker date="1500811094298" expanded="true" signature="23031:23140" ph="SELECT lowon... lowongan_jobdesc" />
+            <marker date="1500811094298" expanded="true" signature="30765:32327" ph="SELECT la.la... lamaran" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3825">
+          <caret line="237" column="92" lean-forward="false" selection-start-line="237" selection-start-column="92" selection-end-line="237" selection-end-column="92" />
+          <folding>
+            <element signature="e#11362#11369#1#HTML" expanded="true" />
+            <marker date="1500822163992" expanded="true" signature="5976:7042" ph="SELECT l.low... lowongan" />
+            <marker date="1500822163992" expanded="true" signature="7138:8129" ph="SELECT l.log... login" />
+            <marker date="1500822163992" expanded="true" signature="7138:8203" ph="SELECT l.low... lowongan" />
+            <marker date="1500822163992" expanded="true" signature="10432:10438" ph=" " />
+            <marker date="1500822163992" expanded="true" signature="10438:10444" ph=" " />
+            <marker date="1500822163992" expanded="true" signature="10444:10450" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/skalausaha_edit_proses.php">
+    <entry file="file://$PROJECT_DIR$/php/connection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pemilikusaha/datausaha_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="329" column="100" lean-forward="false" selection-start-line="329" selection-start-column="95" selection-end-line="329" selection-end-column="100" />
           <folding>
-            <marker date="1500723338938" expanded="true" signature="116:176" ph="UPDATE skala... " />
+            <element signature="n#style#0;n#div#0;n#center#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1500820888980" expanded="true" signature="783:1850" ph="SELECT p.id_... data_usaha" />
+            <marker date="1500820888980" expanded="true" signature="17182:17217" ph="SELECT idkec... kecamatan" />
+            <marker date="1500820888980" expanded="true" signature="19591:19634" ph="SELECT id_sk... skala_usaha" />
+            <marker date="1500820888980" expanded="true" signature="20941:20987" ph="SELECT id_se... sektor_usaha" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/skalausaha_tambah_proses.php">
+    <entry file="file://$PROJECT_DIR$/database.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="70" lean-forward="false" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datalokasimapsbdg1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding>
-            <marker date="1500725849579" expanded="true" signature="116:160" ph="INSERT INTO skala_usaha... " />
+            <marker date="1500823844798" expanded="true" signature="806:830" ph="SELECT * FRO... data_usaha" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/php/skalausaha_delete_proses.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+        <state relative-caret-position="561">
+          <caret line="87" column="44" lean-forward="true" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
           <folding>
-            <marker date="1500725859251" expanded="true" signature="88:129" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/skalausaha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="189" column="85" lean-forward="false" selection-start-line="189" selection-start-column="85" selection-end-line="189" selection-end-column="85" />
-          <folding>
-            <marker date="1500725933006" expanded="true" signature="8284:8387" ph="SELECT id_se... sektor_usaha" />
-            <marker date="1500725933006" expanded="true" signature="8487:8553" ph="SELECT id_se... sektor_usaha" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

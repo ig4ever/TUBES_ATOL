@@ -149,7 +149,7 @@
                                 <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Data Calon Pekerja</h4>
+                                            <h4 class="title">Data Pemilik Usaha</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">

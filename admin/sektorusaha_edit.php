@@ -103,7 +103,7 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Kota</a>
+                            <a class="navbar-brand" href="#">Sektor Usaha</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -133,7 +133,7 @@
                                 <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Edit Kota</h4>
+                                            <h4 class="title">Edit Sektor Usaha</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">

@@ -6,7 +6,7 @@
 	}
 
     if(isset($_SESSION['login_role'])){
-        if($_SESSION['login_role'] != 'Perusahaan')
+        if($_SESSION['login_role'] != 'Pemilik Usaha')
 		    echo "<script language=javascript>document.location.href='login.php'</script>";
 	}
 
@@ -82,13 +82,13 @@
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-left" style="margin-left: 56px;">
                                 <li>
-                                    <a href="kelurahan.php">
+                                    <a href="dashboard.php">
                                         Lowongan
                                     </a>
                                 </li>
                                 
                                 <li>
-                                    <a href="lowongan_tambah.php">
+                                    <a href="datausaha_tambah.php">
                                         Tambah Lowongan
                                     </a>
                                 </li>
@@ -97,7 +97,7 @@
                                     <!-- Modal Search -->
                                     <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                         <div class="modal-dialog" role="document">
-                                            <form method="GET" action="kelurahan.php">
+                                            <form method="GET" action="dashboard.php">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>

@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>TUBES ATOL</title>
+        <title>ATOL</title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <meta name="viewport" content="width=device-width" />
         <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -60,7 +60,7 @@
                 </div>
                  <div class="container" style="opacity: .95;">
                     <div style="margin-top: 128px;">
-                        <form class="form-horizontal" method="POST" action="php/pemilikusaha_tambah_proses.php" enctype="multipart/form-data" style="border: none; padding: 30px 30px;">
+                        <form class="form-horizontal" method="POST" action="php/pemilikusaha_tambah_datausaha.php" enctype="multipart/form-data" style="border: none; padding: 30px 30px;">
                             <!--<img src="img/logo.png" width="90px" style="margin-bottom: 20px;"/>-->
                             <h2 class="login-text">Daftar sebagai <b>Pemilik Usaha</b></h2>
                             <br>

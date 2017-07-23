@@ -1,51 +1,88 @@
 <?php
-	require "../../php/connection.php";
-	session_start();
-	$id = $_POST['id'];
-	$nama = $_POST['nama'];
-	$alamat = $_POST['alamat'];
-	$kota_id = $_POST['kota_id'];
-	$email = $_POST['email'];
-	$telepon = $_POST['telepon'];
+    require "../../php/connection.php";
 
-	$login_id = $_POST['login_id'];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-			
-	mysqli_begin_transaction($connection, MYSQLI_TRANS_START_READ_WRITE);
-	mysqli_autocommit($connection, FALSE);
+    $id = $_POST['id'];
+    $nama = $_POST['nama'];
+    $alamat = $_POST['alamat'];
+    $email = $_POST['email'];
+    $tempat_lahir = $_POST['tempat'];
+    $tanggal_lahir = $_POST['ttl'];
+    $telepon = $_POST['telepon'];
+    $keterangan = $_POST['keterangan'];
 
-	$strQuery = "UPDATE pemilikusaha SET 
-	perusahaan_nama = '$nama', 
-	perusahaan_alamat = '$alamat', 
-	kota_id = '$kota_id', 
-	perusahaan_email = '$email',  
-	perusahaan_telepon = '$telepon'
-	WHERE perusahaan_id = $id";
-	$query = mysqli_query($connection, $strQuery);
-	if($query){
-		if(!empty($password)){
-			$encPassword = md5($password);
-			$strQuery = "UPDATE login SET login_username = '$username', login_password = '$encPassword' WHERE login_id = $login_id";
-		}else {
-			$strQuery = "UPDATE login SET login_username = '$username' WHERE login_id = $login_id";
-		}	
+    $login_id = $_POST['login_id'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-		$query = mysqli_query($connection, $strQuery);
-		if($query) {			
-			$_SESSION['perusahaan_nama'] = $nama;
-			echo "<script language=javascript>alert('Profil Berhasil Diupdate');</script>";
-			mysqli_commit($connection);
-		}else {
-			mysqli_rollback($connection);
-			echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Login Perusahaan');</script>";
-		}
-	}else{
-		mysqli_rollback($connection);
-		echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Perusahaan');</script>";
-	}
-	
-	mysqli_autocommit($connection, TRUE);
-	echo "<script language=javascript>document.location.href='../profil_edit.php'</script>";
-	mysqli_close($connection);
+    mysqli_begin_transaction($connection, MYSQLI_TRANS_START_READ_WRITE);
+    mysqli_autocommit($connection, FALSE);
+    if($_FILES['photo_ktp']['size'] == 0) {
+            $strQuery = "UPDATE pemilik_usaha SET 
+                nama = '$nama', 
+                alamat = '$alamat',  
+                email = '$email', 
+                tempat_lahir = '$tempat_lahir', 
+                tanggal_lahir = '$tanggal_lahir', 
+                no_telp = '$telepon',  
+                keterangan = '$keterangan'
+                WHERE pemilik_usaha_id = $id";
+            $query = mysqli_query($connection, $strQuery);
+            if ($query) {
+                if (!empty($password)) {
+                    $encPassword = md5($password);
+                    $strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
+                } else {
+                    $strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
+                }
+
+                $query = mysqli_query($connection, $strQuery);
+                if ($query) {
+                    mysqli_commit($connection);
+                    echo "<script language=javascript>alert('Berhasil Mengupdate Data Pemilik Usaha');</script>";
+                } else {
+                    mysqli_rollback($connection);
+                    echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
+                }
+            }
+    }else {
+        $target_dir = "../../upload/cv/";
+        $photoKtp = str_replace(" ", "", $nama);
+        $temp = explode(".", $_FILES["photo_ktp"]["name"]);
+        $photoKtp = strtolower($photoKtp . date('YmdHis') . "." . end($temp));
+        $target_file = $target_dir . basename($photoKtp);
+        if (move_uploaded_file($_FILES['photo_ktp']['tmp_name'], $target_file)) {
+            $strQuery = "UPDATE pemilik_usaha SET 
+                nama = '$nama', 
+                alamat = '$alamat',  
+                email = '$email', 
+                tempat_lahir = '$tempat_lahir', 
+                tanggal_lahir = '$tanggal_lahir', 
+                no_telp = '$telepon',  
+                keterangan = '$keterangan',  
+                photo_ktp = '$photoKtp'
+                WHERE pemilik_usaha_id = $id";
+            $query = mysqli_query($connection, $strQuery);
+            if ($query) {
+                if (!empty($password)) {
+                    $encPassword = md5($password);
+                    $strQuery = "UPDATE login SET no_ktp = '$username', password = '$encPassword' WHERE login_id = $login_id";
+                } else {
+                    $strQuery = "UPDATE login SET no_ktp = '$username' WHERE login_id = $login_id";
+                }
+
+                $query = mysqli_query($connection, $strQuery);
+                if ($query) {
+                    mysqli_commit($connection);
+                    echo "<script language=javascript>alert('Berhasil Mengupdate Data Pemilik Usaha Silahkan Cek Email');</script>";
+                } else {
+                    mysqli_rollback($connection);
+                    echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Pemilik Usaha');</script>";
+                }
+            }
+        }
+    }
+
+    mysqli_autocommit($connection, TRUE);
+    echo "<script language=javascript>document.location.href='../profil_edit.php' </script>";
+    mysqli_close($connection);
 ?>

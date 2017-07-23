@@ -133,7 +133,7 @@
                                 <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Edit Kecamtan</h4>
+                                            <h4 class="title">Edit Kecamatan</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">

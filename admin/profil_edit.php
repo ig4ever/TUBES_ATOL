@@ -63,37 +63,37 @@
                         <li>
                             <a href="pemilikusaha.php">
                                 <i class="fa fa-user" style="font-size: 18px;"></i>
-                                <p>Calon Pekerja</p>
+                                <p>Pemilik Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="datausaha.php">
                                 <i class="fa fa-industry" style="font-size: 18px;"></i>
-                                <p>Perusahaan</p>
+                                <p>Data Usaha</p>
                             </a>
                         </li>
                         <li>
                             <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
-                                <p>Kategori</p>
+                                <p>Kecamatan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lowongan.php">
+                            <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
-                                <p>Lowongan</p>
+                                <p>Kelurahan</p>
                             </a>
                         </li>
                         <li>
                             <a href="sektorusaha.php">
                                 <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Lamaran</p>
+                                <p>Sektor Usaha</p>
                             </a>
                         </li>
                         <li>
-                            <a href="kota.php">
-                                <i class="fa fa-bank" style="font-size: 18px;"></i>
-                                <p>Kota</p>
+                            <a href="skalausaha.php">
+                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
+                                <p>Skala Usaha</p>
                             </a>
                         </li>
                     </ul>

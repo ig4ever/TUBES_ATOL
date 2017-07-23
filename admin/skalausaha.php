@@ -127,16 +127,16 @@ if(isset($_GET['datausaha'])){
                                 <!-- Modal Search -->
                                 <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
-                                        <form method="GET" action="sektorusaha.php">
+                                        <form method="GET" action="skalausaha.php">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Masukkan Nama Sektor Usaha</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Masukkan Nama Skala Usaha</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="form-group">
-                                                        <label>Nama Sektor Usaha</label>
-                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Sektor Usaha" />
+                                                        <label>Nama Skala Usaha</label>
+                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Skala Usaha" />
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">

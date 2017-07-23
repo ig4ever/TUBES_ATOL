@@ -54,13 +54,13 @@
                                 <p>Data Usaha</p>
                             </a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="kecamatan.php">
                                 <i class="fa fa-tags" style="font-size: 18px;"></i>
                                 <p>Kecamatan</p>
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="kelurahan.php">
                                 <i class="fa fa-info" style="font-size: 18px;"></i>
                                 <p>Kelurahan</p>
@@ -127,7 +127,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>No. KTP</label>
+                                                        <label>Nama Kecamatan</label>
                                                         <select class="form-control border-input" name="id" onchange="showUser(this.value)">
                                                             <option value=""></option>
                                                             <?php

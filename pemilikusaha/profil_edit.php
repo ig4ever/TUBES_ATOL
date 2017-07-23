@@ -6,36 +6,47 @@
 	}
 
     if(isset($_SESSION['login_role'])){
-        if($_SESSION['login_role'] != 'Perusahaan')
+        if($_SESSION['login_role'] != 'Pemilik Usaha')
 		    echo "<script language=javascript>document.location.href='login.php'</script>";
 	}
 
-    $id = $_SESSION['perusahaan_id'];
-    $nama = "";
-    $alamat = "";
-    $kota_id = "";
-    $email = "";
-    $telepon = "";
-    $login_id = "";
-    $username = "";
-    $password = "";
-    $strQuery = "SELECT p.perusahaan_id, p.perusahaan_nama, p.perusahaan_alamat, k.kota_id, k.kota_nama, 
-                    p.perusahaan_email, p.perusahaan_telepon, l.login_id, l.login_username, l.login_password
-                    FROM perusahaan p INNER JOIN kota k ON p.kota_id = k.kota_id
-                    INNER JOIN login l ON p.perusahaan_id = l.login_id
-                    WHERE p.perusahaan_id = '$id'";
-    $query = mysqli_query($connection, $strQuery);
-    if($query){
-        $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
-        $id = $result['perusahaan_id'];
-        $nama = $result['perusahaan_nama'];
-        $alamat = $result['perusahaan_alamat'];
-        $kota_id = $result['kota_id'];
-        $email = $result['perusahaan_email'];
-        $telepon = $result['perusahaan_telepon'];
-        $login_id = $result['login_id'];
-        $username = $result['login_username'];
-        $password = $result['login_password'];
+    if(isset($_SESSION['id'])) {
+        $id = $_SESSION['id'];
+        $nama = "";
+        $alamat = "";
+        $email = "";
+        $tempat_lahir = "";
+        $tanggal_lahir = "";
+        $telepon = "";
+        $keterangan = "";
+        $status = "";
+        $photoKtp = "";
+        $login_id = "";
+        $username = "";
+        $password = "";
+        $strQuery = "SELECT cp.pemilik_usaha_id, cp.nama, 
+                                                            cp.email, k.no_Ktp,k.login_id,k.password, cp.alamat,
+                                                            cp.tempat_lahir, cp.tanggal_lahir, cp.no_telp,
+                                                            cp.keterangan, cp.photo_Ktp, cp.aktifasi
+                        FROM pemilik_usaha cp INNER JOIN login k ON cp.pemilik_usaha_id = k.login_id
+                        WHERE cp.pemilik_usaha_id = '$id'";
+        $query = mysqli_query($connection, $strQuery);
+        if($query){
+            $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+            $id = $result['pemilik_usaha_id'];
+            $nama = $result['nama'];
+            $alamat = $result['alamat'];
+            $email = $result['email'];
+            $tempat_lahir = $result['tempat_lahir'];
+            $tanggal_lahir = $result['tanggal_lahir'];
+            $status = $result['aktifasi'];
+            $photoKtp = $result['photo_Ktp'];
+            $telepon = $result['no_telp'];
+            $keterangan = $result['keterangan'];
+            $login_id = $result['login_id'];
+            $username = $result['no_Ktp'];
+            $password = $result['password'];
+        }
     }
 ?>
     <!doctype html>
@@ -44,7 +55,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Lowker</title>
+        <title>Pemilik Usaha</title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <meta name="viewport" content="width=device-width" />
         <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -65,36 +76,36 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#" style="font-weight: 800;">LOWKER</a>
+                            <a class="navbar-brand" href="#" style="font-weight: 800;">ATOL</a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-left" style="margin-left: 56px;">
                                 <li>
-                                    <a href="kelurahan.php">
-                                        Lowongan
+                                    <a href="dashboard.php">
+                                        Dashboard
                                     </a>
                                 </li>
                                 
                                 <li>
-                                    <a href="lowongan_tambah.php">
-                                        Tambah Lowongan
+                                    <a href="datausaha_tambah.php">
+                                        Tambah Data Usaha
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-toggle="modal" data-target="#search">Cari Lowongan</a>
+                                    <a href="#" data-toggle="modal" data-target="#search">Cari Data Usaha</a>
                                     <!-- Modal Search -->
                                     <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                         <div class="modal-dialog" role="document">
-                                            <form method="GET" action="kelurahan.php">
+                                            <form method="GET" action="dashboard.php">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                        <h4 class="modal-title" id="myModalLabel">Masukkan Judul Lowongan</h4>
+                                                        <h4 class="modal-title" id="myModalLabel">Masukkan Nama Usaha</h4>
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="form-group">
-                                                            <label>Judul Lowongan</label>
-                                                            <input type="text" class="form-control border-input" name="nama" placeholder="Judul Lowongan" />
+                                                            <label>Nama Usaha</label>
+                                                            <input type="text" class="form-control border-input" name="nama" placeholder="Nama Usaha" />
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -113,7 +124,7 @@
                                     <a href="profil_edit.php">
                                         <p>
                                             <i class="fa fa-user-circle" style="font-size: 18px;"></i> Hallo,
-                                            <?php echo $_SESSION['perusahaan_nama'];?>
+                                            <?php echo $_SESSION['nama'];?>
                                         </p>
                                     </a>
                                 </li>
@@ -139,14 +150,14 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Username</label>
-                                                        <input type="text" class="form-control border-input" name="username" placeholder="Username" value="<?php echo $username;?>"/>
+                                                        <label>No. KTP</label>
+                                                        <input type="text" class="form-control border-input" name="username" placeholder="No. KTP" value="<?php echo $username;?>"/>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12" style="margin-bottom: 34px;">
+                                                <div class="col-md-12" >
                                                     <div class="form-group">
                                                         <label>Password</label>
-                                                        <input type="password" class="form-control border-input" name="password" placeholder="Biarkan kosong jika anda tidak ingin mengganti password" />
+                                                        <input type="password" class="form-control border-input" name="password" placeholder="Biarkan kosong jika anda tidak ingin mengganti passwornya"/>
                                                     </div>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -157,37 +168,36 @@
                                 <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Data Perusahaan</h4>
+                                            <h4 class="title">Data Pemilik Usaha</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Nama Perusahaan</label>
-                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Perusahaan"  value="<?php echo $nama;?>"/>
+                                                        <label>Nama Lengkap</label>
+                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Lengkap" value="<?php echo $nama;?>"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Alamat</label>
-                                                        <input type="text" class="form-control border-input" name="alamat" placeholder="Alamat"  value="<?php echo $alamat;?>"/>
+                                                        <input type="text" id="autocomplete" class="form-control border-input" name="alamat" placeholder="Alamat" value="<?php echo $alamat;?>" onfocus="geolocate()"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Kota</label>
-                                                        <select class="form-control border-input" name="kota_id">
-                                                            <?php
-                                                                $strQuery = "SELECT kota_id, kota_nama FROM kota";
-                                                                $query = mysqli_query($connection, $strQuery);
-                                                                while($subresult = mysqli_fetch_assoc($query)){
-                                                                    if($subresult['kota_id'] == $kota_id)
-                                                                        echo "<option value=$subresult[kota_id] selected>$subresult[kota_nama]</option>";
-                                                                    else
-                                                                        echo "<option value=$subresult[kota_id]>$subresult[kota_nama]</option>";
-                                                                }
-                                                            ?>
-                                                        </select>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Tempat Lahir</label>
+                                                                <input type="text" class="form-control border-input" name="tempat" placeholder="Tempat Lahir" value="<?php echo $tempat_lahir;?>"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Tanggal Lahir</label>
+                                                                <input type="date" class="form-control border-input" name="ttl" placeholder="Tanggal Lahir" value="<?php echo $tanggal_lahir;?>"/>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
@@ -201,12 +211,25 @@
                                                         <label>Telepon</label>
                                                         <input type="text" class="form-control border-input" name="telepon" placeholder="Telepon" value="<?php echo $telepon;?>"/>
                                                     </div>
-                                                </div>                                                
-                                                
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Keterangan</label>
+                                                        <input type="text" class="form-control border-input" name="keterangan" placeholder="Keterangan" value="<?php echo $keterangan;?>"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12" style="margin-bottom: 34px;">
+                                                    <div class="form-group">
+                                                        <label>Foto KTP (Anda sudah mempunyai Foto KTP <?php echo $photoKtp;?>)</label>
+                                                        <input type="file" class="form-control border-input" name="photo_ktp"/>
+                                                    </div>
+                                                </div>
+
                                                 <div class="text-center" style="margin-bottom: 34px;">
+                                                    <input type="hidden" name="MAX_FILE_SIZE" value="500000" />
                                                     <input type="hidden" name="id" value="<?php echo $id;?>" />
                                                     <input type="hidden" name="login_id" value="<?php echo $login_id;?>" />
-                                                    <button type="submit" class="btn btn-info btn-fill btn-wd">Submit Data</button>
+                                                    <button type="submit" name="submit" class="btn btn-info btn-fill btn-wd">Submit Data</button>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -223,7 +246,7 @@
                             &copy;
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Lowker Team</a>
+                            </script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Team</a>
                         </div>
                     </div>
                 </footer>

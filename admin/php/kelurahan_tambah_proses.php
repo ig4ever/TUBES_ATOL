@@ -10,6 +10,6 @@
         echo "<script language=javascript>alert('Terjadi Kesalahan Saat Menambah Data Kelurahan');</script>";
 	}
 
-    echo "<script language=javascript>document.location.href='../kelurahan.php'</script>";
+    echo "<script language=javascript>document.location.href='../dashboard.php'</script>";
 	mysqli_close($connection);
 ?>

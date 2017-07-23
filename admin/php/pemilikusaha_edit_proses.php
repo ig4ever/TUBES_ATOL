@@ -23,9 +23,10 @@
 	if($_FILES['photo_ktp']['size'] == 0) {
         if ($status == "Aktif") {
             define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
+            //define('ROOT', 'http://tralala.azurewebsites.net/pemilikusaha/');
 
             //$id = date('is');
-            //$kode = md5(uniqid(rand()));
+            $kode = md5(uniqid(rand()));
             //$password = md5($password);
 
             $mail = new PHPMailer();
@@ -56,9 +57,9 @@
             email = '$email', 
             tempat_lahir = '$tempat_lahir', 
             tanggal_lahir = '$tanggal_lahir', 
-            aktifasi = '$status',
             no_telp = '$telepon',  
-            keterangan = '$keterangan'
+            keterangan = '$keterangan',
+            kode = '$kode'
             WHERE pemilik_usaha_id = $id";
             $query = mysqli_query($connection, $strQuery);
             if ($query) {
@@ -116,9 +117,10 @@
         $target_file = $target_dir . basename($photoKtp);
         if (move_uploaded_file($_FILES['photo_ktp']['tmp_name'], $target_file) && $status == "Aktif") {
             define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
+            //define('ROOT', 'http://tralala.azurewebsites.net/pemilikusaha/');
 
 //            $id = date('is');
-//            $kode = md5(uniqid(rand()));
+            $kode = md5(uniqid(rand()));
 //            $password = md5($password);
 
             $mail = new PHPMailer();
@@ -149,10 +151,10 @@
             email = '$email', 
             tempat_lahir = '$tempat_lahir', 
             tanggal_lahir = '$tanggal_lahir', 
-            aktifasi = '$status',
             no_telp = '$telepon',  
             keterangan = '$keterangan',  
-            photo_ktp = '$photoKtp' 
+            photo_ktp = '$photoKtp',
+            kode = '$kode'
             WHERE pemilik_usaha_id = $id";
             $query = mysqli_query($connection, $strQuery);
             if ($query) {

@@ -196,7 +196,7 @@
                                                         echo "<td>$result[produk_usaha]</td>";
                                                         echo "<td>$result[produk_utama]</td>";
                                                         echo "<td>$result[alamat]</td>";
-//                                                        echo "<td><a href=kelurahan.php?pemilikusaha=$result[perusahaan_id]>List Lowongan</a></td>";
+//                                                        echo "<td><a href=dashboard.php?pemilikusaha=$result[perusahaan_id]>List Lowongan</a></td>";
                                                         echo "<td><a href=# data-toggle=modal data-target=#detail$i>Detail</a>";
                                                         echo "&nbsp;&nbsp;&nbsp;";
                                                         echo "<a href='datausaha_edit.php?id=$result[id_usaha]'>Edit</a>";

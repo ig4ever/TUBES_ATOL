@@ -6,9 +6,66 @@
 	}
 
     if(isset($_SESSION['login_role'])){
-        if($_SESSION['login_role'] != 'Admin')
+        if($_SESSION['login_role'] != 'Pemilik Usaha')
 		    echo "<script language=javascript>document.location.href='login.php'</script>";
 	}
+
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $nama = "";
+    $usaha = "";
+    $utama = "";
+    $alamat = "";
+    $kecamatan = "";
+    $kelurahan = "";
+    $telepon = "";
+    $latitude = "";
+    $longitude = "";
+    $skala = "";
+    $sektor = "";
+    $gambar1 = "";
+    $gambar2 = "";
+    $gambar3 = "";
+    $gambar4 = "";
+    $gambar5 = "";
+
+    $username = "";
+    $pemilik = "";
+
+    $strQuery = "SELECT p.id_usaha, p.nama_usaha, p.produk_usaha, p.produk_utama,
+                                                        p.alamat, p.telp,p.latitude, p.longitude,p.gambar1, p.gambar2,p.gambar3, p.gambar4,p.gambar5,
+                                                        k.NamaKec, kel.Namakel,sk.NamaSkala, su.NamaSektor,l.no_Ktp,pu.nama
+                                                        FROM data_usaha p INNER JOIN login l ON p.id_login = l.login_id 
+                                                        INNER JOIN kecamatan k ON p.Kecamatan = k.Idkec 
+                                                        INNER JOIN kelurahan kel ON p.Kelurahan = kel.idkel 
+                                                        INNER JOIN skala_usaha sk ON p.Skala_Usaha = sk.id_skala
+                                                        INNER JOIN sektor_usaha su ON p.Sektor_Usaha = su.id_Sektor
+                                                        INNER JOIN pemilik_usaha pu ON l.login_id = pu.pemilik_usaha_id
+                    WHERE p.id_usaha = '$id'";
+    $query = mysqli_query($connection, $strQuery);
+    if($query){
+        $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+        $id = $result['id_usaha'];
+        $nama = $result['nama_usaha'];
+        $usaha = $result['produk_usaha'];
+        $utama = $result['produk_utama'];
+        $alamat = $result['alamat'];
+        $kecamatan = $result['NamaKec'];
+        $kelurahan = $result['Namakel'];
+        $telepon = $result['telp'];
+        $latitude = $result['latitude'];
+        $longitude = $result['longitude'];
+        $skala = $result['NamaSkala'];
+        $sektor = $result['NamaSektor'];
+        $gambar1 = $result['gambar1'];
+        $gambar2 = $result['gambar2'];
+        $gambar3 = $result['gambar3'];
+        $gambar4 = $result['gambar4'];
+        $gambar5 = $result['gambar5'];
+        $username = $result['no_Ktp'];
+        $pemilik = $result['nama'];
+    }
+}
 ?>
     <!doctype html>
     <html lang="en">
@@ -16,13 +73,14 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Admin</title>
+        <title>Pemilik Usaha</title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <meta name="viewport" content="width=device-width" />
         <link href="../css/bootstrap.min.css" rel="stylesheet" />
         <link href="../css/style.css" rel="stylesheet" />
         <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+
         <script>
             function showUser(str) {
                 if (str=="") {
@@ -149,61 +207,7 @@
 
     <body>
         <div class="wrapper">
-            <div class="sidebar" data-background-color="white" data-active-color="info">
-                <div class="sidebar-wrapper">
-                    <div class="logo">
-                        <!--<img src="../img/logo.png" width="60px" />-->
-                        <a href="#" class="simple-text">
-                        Admin
-                    </a>
-                    </div>
-                    <ul class="nav">
-                        <li>
-                            <a href="dashboard.php">
-                                <i class="fa fa-dashboard" style="font-size: 18px;"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pemilikusaha.php">
-                                <i class="fa fa-user" style="font-size: 18px;"></i>
-                                <p>Pemilik Usaha</p>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="datausaha.php">
-                                <i class="fa fa-industry" style="font-size: 18px;"></i>
-                                <p>Data Usaha</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kecamatan.php">
-                                <i class="fa fa-tags" style="font-size: 18px;"></i>
-                                <p>Kecamatan</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="kelurahan.php">
-                                <i class="fa fa-info" style="font-size: 18px;"></i>
-                                <p>Kelurahan</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="sektorusaha.php">
-                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Sektor Usaha</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="skalausaha.php">
-                                <i class="fa fa-paperclip" style="font-size: 18px;"></i>
-                                <p>Skala Usaha</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="main-panel">
+            <div class="main-panel" style="float: none; width: 100%;">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="navbar-header">
@@ -213,15 +217,54 @@
                                 <span class="icon-bar bar2"></span>
                                 <span class="icon-bar bar3"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Data Usaha</a>
+                            <a class="navbar-brand" href="#" style="font-weight: 800;">ATOL</a>
                         </div>
                         <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-left" style="margin-left: 56px;">
+                                <li>
+                                    <a href="dashboard.php">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="datausaha_tambah.php">
+                                        Data Usaha
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#search">Cari Data Usaha</a>
+                                    <!-- Modal Search -->
+                                    <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <form method="GET" action="dashboard.php">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Masukkan Nama Usaha</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Nama Usaha</label>
+                                                            <input type="text" class="form-control border-input" name="nama" placeholder="Nama Usaha" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-info btn-fill">Search</button>
+                                                        <button type="button" class="btn btn-default btn-fill" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- End Modal -->
+                                </li>
+                            </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
                                     <a href="profil_edit.php">
                                         <p>
                                             <i class="fa fa-user-circle" style="font-size: 18px;"></i> Hallo,
-                                            <?php echo $_SESSION['admin_nama'];?>
+                                            <?php echo $_SESSION['nama'];?>
                                         </p>
                                     </a>
                                 </li>
@@ -235,65 +278,40 @@
                     </div>
                 </nav>
                 <div class="content">
-                    <form method="POST" action="php/datausaha_tambah_proses.php" enctype="multipart/form-data" >
+                     <form method="POST" action="php/datausaha_edit_proses.php">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-offset-3 col-md-6">
+                                <div class="col-md-3">
+                                </div>
+                                <div class="col-md-6">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Data Usaha</h4>
+                                            <h4 class="title">Edit Lowongan</h4>
                                         </div>
                                         <div class="content">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>No. KTP</label>
-                                                        <select class="form-control border-input" name="id" onchange="showUser(this.value)">
-                                                            <option value=""></option>
-                                                            <?php
-                                                            $strQuery = "SELECT l.login_id, l.no_ktp,p.nama,p.pemilik_usaha_id FROM login l INNER JOIN pemilik_usaha p ON p.pemilik_usaha_id=l.login_id 
-                                                            WHERE l.login_role='Pemilik Usaha'";
-                                                            $query = mysqli_query($connection, $strQuery);
-                                                            $cek = true;
-                                                            while($subresult = mysqli_fetch_assoc($query)) {
-                                                                echo "<option value=$subresult[login_id]>$subresult[no_ktp]</option>";
-                                                            }
-                                                            ?>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Nama Pemilik Usaha : <span id="txtHint"></span></label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
                                                         <label>Nama Usaha</label>
-                                                        <input type="text" class="form-control border-input" name="nama"
-                                                               placeholder="Nama Usaha"/>
+                                                        <input type="text" class="form-control border-input" name="nama" placeholder="Nama Usaha"  value="<?php echo $nama;?>"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Produk Usaha</label>
-                                                        <input type="text" class="form-control border-input"
-                                                               name="usaha" placeholder="Produk Usaha"/>
+                                                        <input type="text" class="form-control border-input" name="usaha" placeholder="Produk Usaha"  value="<?php echo $usaha;?>"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Produk Utama</label>
-                                                        <input type="text" class="form-control border-input"
-                                                               name="utama" placeholder="Produk Utama"
-                                                               />
+                                                        <input type="text" class="form-control border-input" name="utama" placeholder="Produk Utama" value="<?php echo $utama;?>"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Alamat</label>
-                                                        <input id="alamat" type="text" class="form-control border-input"
-                                                               name="alamat" placeholder="Alamat"/>
+                                                        <input id="alamat" type="text" class="form-control border-input" name="alamat" placeholder="Alamat" value="<?php echo $alamat;?>"/>
                                                         <br>
                                                         <center><input type="button" value="Cari Alamat" onClick="cari_alamat()">
                                                             <br><br>
@@ -326,22 +344,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>Telepon</label>
-                                                        <input type="text" class="form-control border-input"
-                                                               name="telepon" placeholder="Telepon"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Latitude</label>
-                                                        <input type="text" id="lat" class="form-control border-input"
-                                                               name="latitude" placeholder="Latitude"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Longitude</label>
-                                                        <input type="text" id="lng" class="form-control border-input"
-                                                               name="longitude" placeholder="Longitude"/>
+                                                        <input type="text" class="form-control border-input" name="telepon" placeholder="Alamat" value="<?php echo $telepon;?>"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
@@ -382,17 +385,19 @@
                                                         <input type="file" class="form-control border-input"
                                                                name="img" multiple/>
                                                     </div>
-                                                <div class="text-center" style="margin-bottom: 34px;">
-                                                    <input type="hidden" name="MAX_FILE_SIZE" value="500000" />
-<!--                                                    <input type="hidden" class="form-control border-input"-->
-<!--                                                           name="longitude" id="lng" value=""/>-->
-<!--                                                    <input type="hidden" class="form-control border-input"-->
-<!--                                                           name="latitude" id="lat" value=""/>-->
-                                                    <button type="submit" class="btn btn-info btn-fill btn-wd">Submit
-                                                        Data
-                                                    </button>
-                                                </div>
+                                                    <div class="text-center" style="margin-bottom: 34px;">
+
+                                                        <div class="text-center" style="margin-bottom: 34px;">
+                                                            <input type="hidden" name="id" value="<?php echo $id;?>" />
+                                                            <input type="hidden" name="login_id" value="<?php echo $login_id;?>" />
+                                                            <input type="hidden" class="form-control border-input"
+                                                                   name="longitude" id="lng" value=""/>
+                                                            <input type="hidden" class="form-control border-input"
+                                                                   name="latitude" id="lat" value=""/>
+                                                            <button type="submit" class="btn btn-info btn-fill btn-wd">Submit Data</button>
+                                                        </div>
                                                 <div class="clearfix"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -406,7 +411,7 @@
                             &copy;
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script>, made with <i class="fa fa-heart heart"></i>
+                            </script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Team</a>
                         </div>
                     </div>
                 </footer>
@@ -416,14 +421,7 @@
         <script src="../js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../js/dashboard.js" type="text/javascript"></script>
         <!--  Modal  -->
-        <script>
-            <?php
-            for($j= 0 ; $j <= $i; $j++){
-        ?>
-            $('#delete<?php echo $j;?>').appendTo("body")
-            <?php
-            }
-        ?>
+        <script type="text/javascript">
             $('#search').appendTo("body")
         </script>
     </body>

@@ -9,6 +9,6 @@
 		echo "<script language=javascript>alert('Terjadi Kesalahan Saat Mengupdate Data Sektor Usaha');</script>";
 	}
 		
-	echo "<script language=javascript>document.location.href='../kota.php'</script>";
+	echo "<script language=javascript>document.location.href='../sektorusaha.php'</script>";
 	mysqli_close($connection);
 ?>
