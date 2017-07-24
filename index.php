@@ -166,10 +166,10 @@
                 <div class="container">
                     <div class="content">
                         <form method="GET" action="lowongan_list.php">
-                            <div class="row">
+                            <!--<div class="row">
                                 <p>Cari Lowongan Pekerjaan yang Kamu Inginkan</p><br/>
                             </div>
-                            <div class="row" style="">
+                            <div class="row">
                                 <div class="col-md-7">
                                     <input type="text" class="form-control input-lg" name="nama"
                                            placeholder="Lowongan Pekerjaan"/>
@@ -179,10 +179,12 @@
                                         Cari Lowongan
                                     </button>
                                 </div>
-                                </div>
+                            </div>-->
+                            <center>
                             <div class="row">
                                 <div id="map" style="width:1920px; height:1080px"></div>
                             </div>
+                            </center>
                         </form>
                     </div>
                 </div>
