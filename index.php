@@ -159,6 +159,11 @@
                 <!-- /.navbar-collapse -->
             </div>
         </nav>
+        <center>
+                            <div class="row">
+                                <div id="map" style="width:1920px; height:1080px"></div>
+                            </div>
+                            </center>
         <div class="section section-header">
             <div class="parallax filter filter-color-black">
                 <div class="image" style="background-image: url('img/1.jpg')">
@@ -180,11 +185,11 @@
                                     </button>
                                 </div>
                             </div>-->
-                            <center>
+                            <!--<center>
                             <div class="row">
                                 <div id="map" style="width:1920px; height:1080px"></div>
                             </div>
-                            </center>
+                            </center>-->
                         </form>
                     </div>
                 </div>
