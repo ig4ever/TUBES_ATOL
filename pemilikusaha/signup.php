@@ -60,7 +60,7 @@
                 </div>
                  <div class="container" style="opacity: .95;">
                     <div style="margin-top: 128px;">
-                        <form class="form-horizontal" method="POST" action="php/pemilikusaha_tambah_datausaha.php" enctype="multipart/form-data" style="border: none; padding: 30px 30px;">
+                        <form class="form-horizontal" method="POST" action="php/pemilikusaha_tambah_proses.php" enctype="multipart/form-data" style="border: none; padding: 30px 30px;">
                             <!--<img src="img/logo.png" width="90px" style="margin-bottom: 20px;"/>-->
                             <h2 class="login-text">Daftar sebagai <b>Pemilik Usaha</b></h2>
                             <br>

@@ -116,8 +116,8 @@
         $photoKtp = strtolower($photoKtp . date('YmdHis') . "." . end($temp));
         $target_file = $target_dir . basename($photoKtp);
         if (move_uploaded_file($_FILES['photo_ktp']['tmp_name'], $target_file) && $status == "Aktif") {
-            define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
-            //define('ROOT', 'http://tralala.azurewebsites.net/pemilikusaha/');
+            // define('ROOT', 'http://localhost/TUBES_ATOL/TUBES_ATOL/pemilikusaha/');
+            define('ROOT', 'http://tralala.azurewebsites.net/pemilikusaha/');
 
 //            $id = date('is');
             $kode = md5(uniqid(rand()));
