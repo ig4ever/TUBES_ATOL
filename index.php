@@ -13,7 +13,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/index.css" rel="stylesheet" />
         <!--     Fonts and icons     -->
-        <!--<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,800,900' rel='stylesheet' type='text/css'>-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,800,900' rel='stylesheet' type='text/css'>
         <link href="font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <style>
             .map-info-window{
