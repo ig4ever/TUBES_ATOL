@@ -831,7 +831,7 @@ a,
   /* IE10+ */
   background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0.95) 22%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.7) 65%, rgba(255, 255, 255, 0) 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=0 );
   /* IE6-9 */
 }
 
@@ -842,7 +842,7 @@ a,
 .filter {
   position: relative;
   height: 100%;
-  color: #FFFFFF;
+  color: #000000;
 }
 .filter:before {
   position: absolute;
@@ -857,10 +857,10 @@ a,
   background: #333;
 }
 .filter .title-area .description {
-  color: #FFFFFF;
+  color: #000000;
 }
 .filter .separator {
-  color: #FFFFFF;
+  color: #000000;
 }
 .filter .separator:before, .filter .separator:after {
   border-color: #FFFFFF;
@@ -1261,7 +1261,7 @@ a,
 }
 .footer-color-black nav > ul a,
 .footer-transparent nav > ul a {
-  color: #FFFFFF;
+  color: #000000;
 }
 .footer-color-black nav > ul a:hover, .footer-color-black nav > ul a:focus,
 .footer-transparent nav > ul a:hover,
@@ -1712,7 +1712,7 @@ a,
 .section-header .separator,
 .section-header-blog .separator,
 .section-presentation-page .separator {
-  color: #fff;
+  color: #000;
   margin: 30px auto;
 }
 .section-header .separator.line-separator:before, .section-header .separator.line-separator:after,
@@ -2123,7 +2123,7 @@ a,
 }
 .section-closure .text-area {
   background-color: transparent;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 /* HOME PAGE */
@@ -2172,7 +2172,7 @@ a,
 .section-get-started .text-white,
 .section-header-freebie .text-white,
 .section-our-team-freebie .text-white {
-  color: #fff;
+  color: #000;
 }
 .section-get-started .text-gold,
 .section-header-freebie .text-gold,
