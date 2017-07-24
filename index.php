@@ -13,9 +13,9 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/index.css" rel="stylesheet" />
         <!--     Fonts and icons     -->
-        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,800,900' rel='stylesheet' type='text/css'>
+        <!--<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,800,900' rel='stylesheet' type='text/css'>-->
         <link href="font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-        <!--<style>
+        <style>
             .map-info-window{
                 background:#333;
                 border-radius:4px;
@@ -29,7 +29,7 @@
                 position:absolute;
                 text-transform:uppercase;
             }
-        </style>-->
+        </style>
         <script type="text/javascript"
                 src="http://maps.google.com/maps/api/js?sensor=true&amp;key=AIzaSyAEYngJhtgtGJZOVd5c_G-I83qCK2ntToQ"></script>
         <script type="text/javascript">
