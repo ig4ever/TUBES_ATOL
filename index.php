@@ -79,11 +79,14 @@
                     for (var i = 0; i < markers.length; i++) {
                         var Nama_Usaha = markers[i].getAttribute("Nama_Usaha");
                         var Alamat = markers[i].getAttribute("Alamat");
+                        var Produk_Utama = markers[i].getAttribute("produk_utama");
+                        var Produk_Usaha = markers[i].getAttribute("produk_usaha");
                         var type = markers[i].getAttribute("Produk_Utama");
                         var point = new google.maps.LatLng(
                             parseFloat(markers[i].getAttribute("Latitude")),
                             parseFloat(markers[i].getAttribute("Longitude")));
-                        var html = "<b>" + Nama_Usaha + "</b><br/>" + Alamat;
+                        var html = "<b>" + Nama_Usaha + "</b><br/>" + Alamat + "<br>" + Produk_Utama 
+                        + "<br>" + Produk_Usaha;
                         var icon = customIcons[type] || {};
                         var marker = new google.maps.Marker({
                             map: map,

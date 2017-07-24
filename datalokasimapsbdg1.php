@@ -42,7 +42,9 @@
           echo '<marker ';
           echo 'Nama_Usaha="' . parseToXML($row['Nama_Usaha']) . '" ';
           echo 'Alamat="' . parseToXML($row['Alamat']) . '" ';
-		   echo 'Produk_Utama="' . $row['Produk_Utama'] . '" ';
+          echo 'Produk_Utama="' . parseToXML($row['produk_utama']) . '" ';
+          echo 'Produk_Usaha="' . parseToXML($row['produk_usaha']) . '" ';
+		   //echo 'Produk_Utama="' . $row['Produk_Utama'] . '" ';
           echo 'Latitude="' . $row['Latitude'] . '" ';
           echo 'Longitude="' . $row['Longitude'] . '" ';
          
