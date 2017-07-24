@@ -4,7 +4,7 @@
     require_once('../../library/class.phpmailer.php'); //menginclude librari phpmailer
     require '../../library/PHPMailerAutoload.php';
 
-    $id = $_POST['id'];
+    $id = $_POST['login_id'];
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
     $email = $_POST['email'];
