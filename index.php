@@ -85,8 +85,8 @@
                         var point = new google.maps.LatLng(
                             parseFloat(markers[i].getAttribute("Latitude")),
                             parseFloat(markers[i].getAttribute("Longitude")));
-                        var html = "<b>" + Nama_Usaha + "</b><br/>" + Alamat + "<br>" + Produk_Utama 
-                        + "<br>" + Produk_Usaha;
+                        var html = "<h1><b>" + Nama_Usaha + "</b></h1><br/><h3>" + Alamat + "</h3><br><h3>" + Produk_Utama 
+                        + "</h3><br><h3>" + Produk_Usaha + "</h3>";
                         var icon = customIcons[type] || {};
                         var marker = new google.maps.Marker({
                             map: map,
