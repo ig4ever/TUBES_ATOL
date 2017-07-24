@@ -79,8 +79,8 @@
                     for (var i = 0; i < markers.length; i++) {
                         var Nama_Usaha = markers[i].getAttribute("Nama_Usaha");
                         var Alamat = markers[i].getAttribute("Alamat");
-                        var Produk_Utama = markers[i].getAttribute("produk_utama");
-                        var Produk_Usaha = markers[i].getAttribute("produk_usaha");
+                        var Produk_Utama = markers[i].getAttribute("Produk_Utama");
+                        var Produk_Usaha = markers[i].getAttribute("Produk_Usaha");
                         var type = markers[i].getAttribute("Produk_Utama");
                         var point = new google.maps.LatLng(
                             parseFloat(markers[i].getAttribute("Latitude")),
