@@ -86,6 +86,7 @@
                     echo "<script language=javascript>document.location.href='../pemilikusaha_tambah.php'</script>";
                 }
             }else{
+                $login_id = mysqli_insert_id($connection);
                 $kode    = md5(uniqid(rand()));
                 $strQuery = "INSERT INTO pemilik_usaha VALUES( 
                     '$login_id',
@@ -98,7 +99,7 @@
                     '$ket',
                     '$cv',
                     '$status',
-                    '$kode'
+                    ''
                 )";
 
                 $query = mysqli_query($connection, $strQuery);

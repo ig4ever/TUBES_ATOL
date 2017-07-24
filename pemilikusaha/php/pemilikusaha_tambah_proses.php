@@ -84,6 +84,7 @@
                     echo "<script language=javascript>document.location.href='../signup.php'</script>";
                 }
             }
+        }
             else{
                 $login_id = mysqli_insert_id($connection);
                 
@@ -98,7 +99,7 @@
 				'$ket',
 				'$cv',
 				'Belum Aktif',
-				'$kode'
+				''
 			)";
 
                 $query = mysqli_query($connection, $strQuery);
@@ -111,13 +112,9 @@
                     echo "<script language=javascript>alert('Registrasi Gagal');</script>";
                     echo "<script language=javascript>document.location.href='../signup.php'</script>";
                 }
-            }
-		}else {
-			mysqli_rollback($connection);
-			echo "<script language=javascript>alert('Lengkapi Formnya');</script>";
-			echo "<script language=javascript>document.location.href='../signup.php'</script>";
 		}
-	}else{
+    }
+    else{
 		echo "<script language=javascript>alert('Password Tidak Cocok');</script>";
 		echo "<script language=javascript>document.location.href='../signup.php'</script>";
 	}
